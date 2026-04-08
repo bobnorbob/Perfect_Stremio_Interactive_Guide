@@ -1,0 +1,79 @@
+├── assets
+│   ├── css
+│   │   ├── base.css
+│   │   ├── components.css
+│   │   ├── style.css
+│   │   ├── utilities.css
+│   │   └── variables.css
+│   ├── js
+│   │   ├── navigation.js
+│   │   ├── theme.js
+│   │   ├── markdown.js
+│   │   ├── marked.min.js
+│   │   ├── checklist.js
+│   │   ├── image-toggle.js
+│   ├── images
+│   │   ├── 
+│   │   ├── 1.2.1.png
+│   │   ├── 1.2.2.png
+│   │   ├── 1.4.png
+│   │   ├── 1.5.png
+│   │   ├── 1.6.png
+│   │   ├── 2.1.png
+│   │   ├── 2.2.png
+│   │   ├── 2.3.png
+│   │   ├── 3.3.png
+│   │   ├── 3.4.png
+│   │   ├── 3.5.png
+│   │   ├── 3.6.png
+│   │   ├── 3.8.png
+│   │   ├── 3.9.1.png
+│   │   ├── 3.9.2.png
+│   │   ├── 3.9.3.png
+│   │   ├── 3.10.png
+│   │   ├── 3.11.png
+│   │   ├── 3.12.1.png
+│   │   ├── 3.12.2.png
+│   │   ├── 4.2.png
+│   │   ├── 4.3.png
+│   │   ├── 4.4.1.png
+│   │   ├── 4.4.2.png
+│   │   ├── 4.4.3.png
+│   │   ├── 4.4.png
+│   │   ├── 4.7.png
+│   │   ├── 5.1.png
+│   │   ├── 5.3.png
+│   │   ├── 5.4.png
+│   │   ├── 5.5.png
+│   │   ├── 5.6.png
+│   │   ├── 6.1.png
+│   │   ├── 6.2.png
+│   │   ├── 6.3.png
+│   │   ├── 7.1.png
+│   │   ├── 7.2.png
+│   │   ├── 7.3.png
+│   │   ├── 7.4.png
+│   │   ├── 9.1.png
+│   │   ├── 9.2.png
+│   │   ├── 9.3.png
+│   │   ├── 9.4.png
+│   │   ├── home.jpg
+│   └── └── U.1.png
+├── guide
+│   ├── 0-Beginner-Concepts.md
+│   ├── 1-Accounts-Preparation.md
+│   ├── 2-Stremio-Initialization.md
+│   ├── 3-AIOStreams-Setup.md
+│   ├── 4-AIOMetadata-Setup.md
+│   ├── 5-Cinebye-Cleanup.md
+│   ├── 6-Personalized-Lists.md
+│   ├── 7-Additional-Stuff.md
+│   ├── 8-Configuration-QA.md
+│   ├── AIOManager-Setup.md
+│   ├── index.md
+│   └── Updates.md
+templates
+├── AIOMetadata.json
+├── AIOStreams.json
+└── AIOStreams-Formatter.json
+index.html

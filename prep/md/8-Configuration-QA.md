@@ -1,0 +1,170 @@
+---
+layout: guide
+title: "❓ Configuration Q&A"
+---
+
+# ❓ Configuration Q&A
+
+I am including this section for anyone who has any additional questions or is encountering any common issues. Most of this is already in the guide, but a lot of you skip them :), so I have extracted them here for you to find answers quickly:
+
+## **I installed or removed addons, but nothing changes in Stremio. Am I in the wrong place?**
+* Make sure you are signed into [**web.stremio.com**](https://web.stremio.com/) when installing or removing addons. Being logged into [**www.stremio.com**](https://www.stremio.com/) (account site) does not automatically log you into web.stremio.com.
+
+![Sign In](/assets/images/2.1.png)
+
+## **I'm getting an error "No addons were requested for streams" when opening content on Stremio.**
+* This means **AIOStreams** is not installed or configured correctly.
+* Check if you installed it while logged in with your account on web.stremio.com. It should also be showing on Cinebye. Otherwise you installed it without being logged in so log in to web.stremio.com and install it again.
+* In **AIOStreams** go to **Addons** and check if there are any addons (Torrentio, StremThru, etc.), and they are enabled. If there's no addons, then you didn't load the template provided in the guide. Please follow the AIOStreams setup again.
+
+## **I still see old addons and clutter. How do I "reset" the account cleanly?**
+* In [**Stremio Web**](https://web.stremio.com/): go to **Addons** and uninstall everything you can.
+* Also remove the **Trakt Integration** addon (it is different from **Trakt Scrobbling**).
+* **Cinemeta** and **Local Files** cannot be removed. You patch them via Cinebye.
+
+![Remove Addons](/assets/images/2.3.png)
+
+## **I am not using a Debrid service and I want to stream via P2P torrents directly. What should I change, and what should I expect?**
+* In **AIOStreams → Addons → Installed Addons**, disable **AnimeTosho**, **SeaDex**, and **Knaben** because they do not work without a Debrid service.
+* You can still get anime results via the other scrapers, but they will be more limited. **SeaDex** and **AnimeTosho** usually increase the chances of finding better anime sources.
+* When streaming via torrents, keep in mind speeds can be slow, and some links can be unwatchable if there are not enough peers.
+* When torrenting, prefer links with a higher peer count (shown next to the **P2P** label).
+* See also the next question below to enable HTTP streams in addition to torrenting.
+
+## **I can't pay for a Debrid service, but I also can't use P2P torrenting because it seems to be very slow, or for other reasons.**
+* The only remaining option would be direct HTTP streams, which are free, no Debrid, no torrent.
+* When you load the template provided in this guide on **AIOStreams**, you can skip the "**Select Services**" step, and on the "**Template Options**" step, you need to enable the "**HTTP Addons**" toggle. This will install **Sootio**, **Nuvio Streams** and **WebStreamr** addons, which provide direct HTTP streaming links. If you want you can additionally configure them with the pencil button to the right, e.g. for *WebStreamr* you can select specialty language providers.
+* The HTTP streams will show with the 🌐 icon on the stream information view.
+* The HTTP option might work very well sometimes, but it's not without its limitations. The streams you will find are more limited, the provider servers may be slow during high load times, and the quality may be lacking. But it's better than nothing I guess.
+
+## **I don't understand what the icons (⚡,⏳,...) on the stream information view mean. How do I read them?**
+* Go to [**🛠️ Additional Stuff**](7-Additional-Stuff.md#understanding-stream-information-view) to read the descriptions for each icon.
+
+## **The icons of the stream information view are too plain/colorful, I would like more/less colors to differentiate.**
+* Go to [**🛠️ Additional Stuff**](7-Additional-Stuff.md#alternative-stream-information-icons) on the extended guide to get an alternative template you can use instead.
+
+## **I want Trakt progress syncing, but I do not want extra Trakt addons.**
+* In [web.stremio.com](https://web.stremio.com/), sign in, and go to **Settings** and enable **Trakt Scrobbling** by connecting your Trakt account.
+* Then uninstall the **Trakt Integration** addon from Stremio addons.
+
+![Trakt Scrobbling](/assets/images/2.2.png)
+
+## **I want Anime sources, but I am not seeing them.**
+* In **AIOStreams**: go to **Addons → Installed Addons** and enable **SeaDex** and **AnimeTosho** (installed only if you enabled a Debrid service and activated the Anime addons when you loaded the template).
+
+![Addon Configuration](/assets/images/3.9.1.png)
+
+* In **AIOMetadata**: go to **Search** and enable both **Anime Search Engine** switches.
+
+![Anime Search](/assets/images/4.4.1.png)
+
+## **I want subtitles in specific languages.**
+* In **AIOStreams**: go to **Addons → Installed Addons**, edit **OpenSubtitles V3 Pro**, and set your subtitle language preferences there.
+
+## **I don't understand how the streams shown to me are being sorted.**
+* Go to [**🛠️ Additional Stuff**](7-Additional-Stuff.md#smart-stream-selection--sorting) to see the configured sort order.
+
+## **I need non-English results to appear first in the results list.**
+* In **AIOStreams**: go to **Filters → Language**.
+* Add your language to **Preferred Languages**.
+* Put it first in **Preference Order**.
+* You can also add the language in the **Required Languages** if you want to ONLY show streams in that language, but keep in mind that streams that might have no language tags at all or tagged as "multi" will be filtered out.
+
+![Preferred Language](/assets/images/3.9.2.png)
+
+## **I want my language to be prioritized even before Quality/Resolution.**
+* In **AIOStreams**: go to **Sorting**.
+* For the **Split by Cache: Cached Streams** list in the **Global** tab, move **Language** to the top (or wherever you want it).
+* Repeat for the **Split by Cache: Uncached Streams** list.
+
+![Sorting Language](/assets/images/3.9.3.png)
+
+## **I am not happy with non-English results. It feels like good results are being filtered out.**
+* In **AIOStreams**: go to **Filters → Matching** and disable matching by turning off the **Enable** toggle in all three sections:
+   * *Title Matching*
+   * *Year Matching*
+   * *Season/Episode Matching*
+
+![Disable Matching](/assets/images/3.12.2.png)
+
+## **Results are coming in too slowly. How can I speed it up?**
+* In **AIOStreams**: go to **Addons → Addon Fetching Strategy** and try **Dynamic**, leave the **Exit Condition** as is, then save your config.
+* If you notice it misses good links, switch back to **Default**.
+
+![Change Fetching](/assets/images/3.12.1.png)
+
+## **I feel like I am getting too few good results. What should I change?**
+* If you set fetching to **Dynamic** (**AIOStreams → Addons → Addon Fetching Strategy**), try switching back to **Default**.
+* Make sure you have enough scrapers enabled.
+* Go to [**🛠️ Additional Stuff**](7-Additional-Stuff.md#smart-stream-selection--sorting) to see the optimizations configured in the **AIOStreams** template provided in this guide and how to make changes to them.
+
+![Change Fetching](/assets/images/3.12.1.png)
+
+## **I cannot save because it says "Knaben/SeaDex/AnimeTosho requires a Debrid service…".**
+* If you are not using Debrid: disable **Knaben**, **SeaDex**, and **AnimeTosho** in **Addons → Installed Addons**, then save again.
+* If you want Knaben/SeaDex/AnimeTosho, you will need a Debrid service.
+
+## **I do not have an RPDB subscription. What key should I use?**
+* Use the free RPDB key: `t0-free-rpdb` (works for both AIOStreams and AIOMetadata integrations as described in the guide).
+
+## **I don't want to get a Gemini key since it's optional, but AIOMetadata seems to require it.**
+* in **AIOMetadata** go to the **Search** tab and disable **AI-Powered Search**, then you will be able to save the configuration.
+
+## **Titles and descriptions in Stremio are in English. Can I change the metadata language?**
+* In **AIOMetadata**: go to **General** and change **Display Language**.
+
+![Display Language](/assets/images/4.4.3.png)
+
+## **I cannot save the AIOStreams configuration and see "Failed to fetch manifest..." and/or "502 - Bad Gateway".**
+* This usually means one or more addons are temporarily offline.
+* Go to **Addons → Installed Addons**, disable the problematic addons mentioned on the error message, and save the configuration so you can continue the guide.
+* At a later time, return to AIOStreams, enable the addon again, and try to save it if it's back online.
+
+## **Some catalogs show "Failed to fetch" or appear empty in Stremio.**
+* This is often caused by Trakt being temporarily down or rate limiting requests.
+* Just wait it out, it will work later. No reconfiguration is needed in most cases.
+
+## **I cannot complete the Trakt integration step on AIOMetadata.**
+* Trakt has enforced strict rate limits lately, and all public instances are affected.
+* If it says "Instance owner has not yet set up the Trakt integration." when you click the Trakt button, then it means Trakt integration has been disabled by the instance provider. If you still need Trakt, you're going to need to do the AIOMetadata configuration with another instance.
+* If it's giving errors while integrating, you can try at a later point and hope it works, or do the AIOMetadata setup with another instance.
+* Alternatively, you can leave Trakt integration disabled, and hide the Trakt catalogs on the list (marked with a red **Trakt** tag on the right) by clicking the green eye icon for each. I know it's not ideal since you created a Trakt account already, but there's nothing we can do about it. You can still add other catalogs from the other sources there, but it's outside the scope of this guide.
+* There are also good alternatives to Trakt if you disable it, both for watch history tracking, and curated catalogs, which you can check out on [**🛠️ Additional Stuff**](7-Additional-Stuff.md#enriching-your-catalogs-trakt-alternatives).
+
+![Trakt Disable](/assets/images/4.4.1.png)
+
+## **I added or changed AIOMetadata catalogs, but they do not show in Stremio.**
+* Go to **Cinebye**, authenticate, and then in **Manage Addons** click the **Refresh** icon next to **AIOMetadata**.
+
+![Refresh Addons](/assets/images/5.6.png)
+
+## **I get an error installing AIOMetadata: "AddonsPushedToAPI Max descriptor size reached".**
+* You likely have too many catalogs enabled.
+* Disable some catalogs in AIOMetadata, **Save Configuration**, then try **Install** again.
+
+## **I'm getting an error "No addons were requested for this meta!" when opening content on Stremio.**
+* This means **AIOMetadata** is not installed or configured correctly.
+* Check if you installed it while logged in with your account on web.stremio.com. It should also be showing on Cinebye. Otherwise you installed it without being logged in so log in to web.stremio.com and install it again.
+* Make sure **Catalog Mode Only** in AIOMetadata **Configuration** tab is disabled.
+
+## **I want Watchly recommendations to show near the top of Stremio.**
+* Go to **Cinebye**, authenticate, and then in **Manage Addons** reorder addons so **Watchly** is **second** (after Cinemeta, before AIOMetadata), then click **Sync to Stremio**.
+
+![Order Addons](/assets/images/5.4.png)
+
+## **I want more ready-made catalogs inside AIOMetadata.**
+* In **AIOMetadata → Catalogs**, click the **Trakt** button and search for lists from user **snoak** to import more lists.
+* For even more curated catalogs, you can integrate **MDBList** and get lists from there. Check out how in [**🛠️ Additional Stuff**](7-Additional-Stuff.md#enriching-your-catalogs-trakt-alternatives).
+
+## **CouchMoney only created two lists for me. Is that normal?**
+* Yes, the guide notes Trakt free users are limited (CouchMoney will create two lists). If you want more extensive recommendations inside Stremio, use **Watchly**.
+
+## **I used the old "ForTheWeak" (fortheweak.nhyira.dev) AIOStreams/AIOMetadata domains. What do I need to do after the domain migration?**
+* **AIOStreams:** redo Step 3 on one of the new instance links and use the updated template.
+* **AIOMetadata:** uninstall AIOMetadata from **Addons** in [web.stremio.com](https://web.stremio.com/), open the new AIOMetadata instance, sign in with your existing UUID/Password (accounts were migrated automatically), **Save Configuration**, **Install**, then go to Cinebye and reorder addons again and **Sync**.
+
+## **I forgot where to save changes in AIOStreams or AIOMetadata. What is the one rule?**
+* **AIOStreams:** ALWAYS save in **Save & Install → Save**.
+* **AIOMetadata:** ALWAYS save in **Configuration → Save Configuration**.
+
+

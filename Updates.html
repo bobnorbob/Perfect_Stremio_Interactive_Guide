@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Updates</title>
+    <link rel="stylesheet" href="../assets\css\style.css">
+  </head>
+  <body for="html-export">
+    <main id="doc-card">
+      <h1 id="-updates">🔔 Updates </h1>
+      <h2 id="aiostreams">AIOStreams </h2>
+      <p>To do a regular update when a new version of the template for <strong>AIOStreams</strong> is released on this guide (<em>you can check the version number on the title of the guide</em>), unless described otherwise in specific updates listed further down, you can simply import the template again on your current AIOStreams account (<strong>UUID</strong>).</p>
+      <p>Depending on the version of the template you used initially, to avoid any conflicting changes when updating, especially before v2.0 where I had not yet started to track the changes, I would suggest to reset your current configuration before importing the latest template. From <strong>v2.0</strong> on, you can check the <a href="Changelog.md"><strong>📜 Changelog</strong></a> to see whether you'll need to reset, otherwise just import it on top of your configuration. Also, after you import a template <strong>v2.0</strong> (or higher) once, next time there is an update to the template version, you will be notified automatically when logging in to your AIOStreams account and you can decide whether to apply it or not. The changelog will be shown with the notification, so if you decide you want to update, you just click on "<strong>Apply Update</strong>" and follow the steps.</p>
+      <p><img src="..\assets\images\U.1.png" alt="Update Notification"></p>
+      <p>Here's a quick summary on how to update to the latest <strong>AIOStreams</strong> template manually:</p>
+      <ol>
+      <li>Sign in to your <strong>AIOStreams</strong> instance with your <strong>UUID</strong> and <strong>Password</strong>.</li>
+      <li><strong>Optional</strong>:  As mentioned above, if upgrading from a template before v2.0, I suggest to reset your configuration by going to the <strong>Save &amp; Install</strong> tab, click "<strong>Reset Configuration</strong>", and confirm it by clicking "<strong>Reset</strong>".</li>
+      <li>On the <strong>Save &amp; Install</strong> tab still, click "<strong>Import</strong>", then "<strong>Import Template</strong>", and paste the <a href="https://raw.githubusercontent.com/luckynumb3rs/stremio-perfect-setup/refs/heads/main/templates/AIOStreams.json"><strong>template link</strong></a> and click on "<strong>Go</strong>".</li>
+      <li>Click "<strong>Use this Template Now</strong>".</li>
+      <li>On the "<strong>Select Services</strong>" page that is shown, enable the Debrid services you are already using and click "<strong>Next</strong>". If you're not using any services and want to proceed with the <strong>P2P/HTTP</strong> setup, click "<strong>Skip</strong>".</li>
+      <li>On the "<strong>Template Options</strong>" page, you'll be able to personalize the configuration to match your preferences, as described on the <a href="3-AIOStreams-Setup.md"><strong>📚 3. AIOStreams</strong></a> step.</li>
+      <li>On the "<strong>Enter Credentials</strong>" page, since you're loading the template over your existing configuration, all API keys needed should already be activated and filled. Otherwise, enter any missing/new ones.</li>
+      <li>Click on "<strong>Load Template</strong>" and the template is loaded.</li>
+      <li><strong>IMPORTANT</strong>: If you made any changes to the configuration after you loaded it when you did the setup for the first time, you may need to do them again (e.g. language changes such as subtitles and language preferences, any addon modifications, etc.).</li>
+      <li>Click on "<strong>Save</strong>" on the "<strong>Save &amp; Install</strong>" tab. No need to install the addon on Stremio again.</li>
+      </ol>
+      <h2 id="aiometadata">AIOMetadata </h2>
+      <p>For <strong>AIOMetadata</strong>, there's normally not as many changes as AIOStreams so you shouldn't need to perform any updates unless explicitly required, so here are the steps if needed:</p>
+      <ol>
+      <li>Sign in to your <strong>AIOMetadata</strong> instance with your <strong>UUID</strong> and <strong>Password</strong>.</li>
+      <li>Go to the "<strong>Configuration</strong>" tab, click "<strong>Import Configuration</strong>", and load the downloaded <a href="https://raw.githubusercontent.com/luckynumb3rs/stremio-perfect-setup/refs/heads/main/templates/AIOMetadata.json"><strong>configuration file</strong></a>.</li>
+      <li><strong>IMPORTANT</strong>: If you made any changes to the configuration after you loaded it when you did the setup for the first time, you may need to do them again (e.g. enabled/disabled/added/removed catalogs, changed any anime settings, etc.).</li>
+      <li>On the same "<strong>Configuration</strong>" tab, click "<strong>Save Configuration</strong>". No need to install the addon on Stremio again.</li>
+      <li>Keep in mind that if you change catalog structure in AIOMetadata after you installed it on Stremio, you need to go to Cinebye, authenticate again with Stremio credentials, and click the <strong>Refresh</strong> icon to the right of AIOMetadata in the "<strong>Manage Addons</strong>" section.*</li>
+      </ol>
+      <p><img src="..\assets\images\5.6.png" alt="Refresh Addons"></p>
+      <h2 id="specific-updates">SPECIFIC UPDATES </h2>
+      <blockquote>
+      <p><strong>IMPORTANT</strong>: For those of you that configured <strong>AIOStreams</strong> and/or <strong>AIOMetadata</strong> on the <em>ForTheWeak</em> instances (compare your links with these: <a href="https://aiostreamsfortheweak.nhyira.dev/"><em>aiostreamsfortheweak.nhyira.dev</em></a> and <a href="https://aiometadatafortheweak.nhyira.dev/"><em>aiometadatafortheweak.nhyira.dev</em></a>), it was recently announced <a href="https://www.reddit.com/r/StremioAddons/comments/1r0jgzm/fortheweak_domain_migration/">here</a> that those instances are being migrated to a new domain, so you're going to have to migrate your AIOStreams &amp; AIOMetadata configurations on the new instances since the ones you used will be closed after a transitory phase. Not to worry though, it's easy. Read below.</p>
+      </blockquote>
+      <ol>
+      <li>For <strong>AIOStreams</strong>:
+      <ol>
+      <li>Log in to <a href="https://web.stremio.com">web.stremio.com</a>.</li>
+      <li>Go to "<strong>Addons</strong>" tab and uninstall the "<strong>AIOStreams</strong>" addon.</li>
+      <li>Go to the <a href="https://aiostreams.fortheweak.cloud/"><strong>new</strong></a> instance.</li>
+      <li>Sign in with the existing <strong>UUID</strong> and <strong>Password</strong> you got when you set up AIOStreams in the old instance (the accounts are migrated to the new domain, so you don't have to configure it again here).</li>
+      <li>Go to the "<strong>Save &amp; Install</strong>" tab again and click on "<strong>Save</strong>".</li>
+      <li>Click "<strong>Install</strong>" which will appear and install the addon on Stremio.</li>
+      </ol>
+      </li>
+      <li>For <strong>AIOMetadata</strong>:
+      <ol>
+      <li>Log in to <a href="https://web.stremio.com">web.stremio.com</a>.</li>
+      <li>Go to "<strong>Addons</strong>" tab and uninstall the "<strong>AIOMetadata</strong>" addon.</li>
+      <li>Go to the <a href="https://aiometadata.fortheweak.cloud/"><strong>new</strong></a> instance.</li>
+      <li>Sign in with the existing <strong>UUID</strong> and <strong>Password</strong> you got when you set up AIOMetadata in the old instance (the accounts are migrated to the new domain, so you don't have to configure it again here).</li>
+      <li>Go to the "<strong>Configuration</strong>" tab again and click on "<strong>Save Configuration</strong>".</li>
+      <li>Click "<strong>Install</strong>" which will appear and install the addon on Stremio.</li>
+      <li>Go to the <a href="https://cinebye.elfhosted.com/"><strong>Cinebye</strong></a> instance, log in there with your Stremio account or with the AuthKey and reorder the addons again as described on the guide. You don't need to reapply the patches in section "<strong>2 - Options</strong>", just reorder the addons in the "<strong>Manage Addons</strong>" section, and "<strong>Sync</strong>".</li>
+      </ol>
+      </li>
+      </ol>
+    </main>
+  </body>
+</html>

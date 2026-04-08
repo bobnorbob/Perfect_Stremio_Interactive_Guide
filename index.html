@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home | Stremio Perfect Setup Collector's Edition</title>
+  <meta name="description" content="Full and Easy Total Beginner's Guide">
+  <link rel="icon" href="/assets/images/sps-logo.svg" type="image/svg+xml">
+  <link rel="shortcut icon" href="/assets/images/sps-logo.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/images/sps-logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script src="/assets/js/theme.js"></script>
+
+</head>
+<body>
+  <header class="topbar">
+    <button class="icon-btn" id="nav-toggle" aria-label="Open navigation" aria-controls="sidebar" aria-expanded="false">☰</button>
+    <a class="topbar-brand" href="/index.html">
+      <img src="/assets/images/sps-logo.svg" alt="Stremio logo" class="topbar-logo">
+      <span class="topbar-brand-text">
+        <span class="topbar-title">Stremio Perfect Setup Collector's Edition</span>
+        <span class="topbar-subtitle">Full and Easy Total Beginner's Guide</span>
+      </span>
+    </a>
+    <button class="icon-btn" id="theme-toggle" aria-label="Toggle theme" aria-pressed="false">◐</button>
+  </header>
+
+  <button></button> id="nav-backdrop" class="nav-backdrop" aria-hidden="true"</button>
+
+  <aside class="sidebar" id="sidebar" aria-label="Guide navigation">
+    <div class="sidebar__inner">
+      <nav id="sidebar-nav"></nav>
+    </div>
+  </aside>
+
+  <div class="layout">
+    <main id="main-content" class="content">
+      <article class="doc-card fade-in">
+        <h1 id="-stremio-full--easy-total-beginners-guide">🎬 STREMIO FULL & EASY TOTAL BEGINNER’S GUIDE</h1>
+<p><strong>[⚡ DEBRID / 🧲 P2P / 🌐 HTTP]</strong> (<em>v2.0</em>)</p>
+<p><img src="/assets/images/home.jpg" alt="Homescreen (left) & Stream source selection (right)"></p>
+<p><strong>If this guide helps you, PLEASE UPVOTE the <a href="https://www.reddit.com/r/StremioAddons/comments/1qvn9rk/my_stremio_perfect_setup_for_me_at_least_sharing/">Reddit post</a> so it remains relevant for others to find it and also benefit from it.</strong> 😊</p>
+<p>After a few iterations trying out what works and what doesn't for me, and testing various addons, I think I have reached the optimal Stremio setup. Of course it's a matter of taste and everyone has different preferences, but I will share my guide here for anyone interested, or at least get started easily and then modify in reverse whatever changes they want. So here it is completely from scratch:</p>
+<p><strong>Don't be scared. Although it may look like a very long guide, it's actually just a few simple steps and very easy. I just wanted to be thorough and describe everything totally step-by-step so you understand what you're doing.</strong></p>
+
+<blockquote>
+  <p><strong>NOTES:</strong></p>
+  <ul>
+    <li><strong>If you are a total beginner and are curious to understand the concepts around Stremio</strong> and how it works, go to <a href="/0-Beginner-Concepts.html"><strong>🔰 Beginner Concepts</strong></a>.</li>
+    <li>If you already followed this guide and would like to <strong>update to the latest template</strong> (check out the version number on the title), go to <a href="/Updates.html"><strong>🔔 Updates</strong></a>.</li>
+    <li><strong>If you followed this guide and are encountering issues or have configuration questions</strong>, go to <a href="/8-Configuration-QA.html"><strong>❓ Configuration Q&amp;A</strong></a>. If you're just starting, remember this for later in case you need it. <strong>PLEASE avoid asking questions that are already answered there</strong>.</li>
+    <li><strong>🙏 A very explicit special THANKS</strong> to the <strong>Stremio</strong> developers which goes without saying, and all the community collaborators without which we wouldn't be able to enjoy any of it: <a href="https://ko-fi.com/tamtaro"><strong>TamTaro</strong></a> for the template base and SEL filters, <a href="https://ko-fi.com/vidhin"><strong>Vidhin</strong></a> for the Regexes, and the addon developers <a href="https://ko-fi.com/Viren070"><strong>Viren</strong></a> for AIOStreams, <a href="https://buymeacoffee.com/cedya"><strong>Cedya</strong></a> for AIOMetadata, <a href="https://ko-fi.com/timilsinabimal"><strong>Sanopandit</strong></a> for Watchly, <a href="https://ko-fi.com/sonicx161"><strong>Sonic</strong></a> for AIOManager, the public addon instance hosters which make everything so much simpler for most, and anyone else I may have failed to mention. All of these people continue to develop and improve them actively together with the Stremio community, so shout out to all of them for their wonderful work, and consider buying them a coffee if you agree with me! Since a few of you have also asked about tipping me for helping, even though I did it for fun and an very happy if my guide helped you, <a href="https://ko-fi.com/luckynumb3rs"><strong>here</strong></a> is my coffee link 😃</li>
+  </ul>
+</blockquote>
+
+<p>In case you are wondering whether it's worth the effort, or you already have a Torrentio + RD setup and want to know what's better if you use this guide, here's a summary:</p>
+
+<ul>
+  <li><strong>Cleaner Management</strong>: instead of one scraper and a messy pile of addons, you use <em>two central addons</em> (AIOStreams + AIOMetadata) to keep everything <em>clean, consistent, and easy to manage</em>.</li>
+  <li><strong>Better Results</strong>: AIOStreams combines <em>multiple scrapers/providers</em>, so you usually get <em>more working sources</em> and better coverage.</li>
+  <li><strong>Best Links First</strong>: smart <em>sorting + filtering</em> pushes the most relevant options to the top (cache, quality, resolution, size, reliability signals), so less scrolling and fewer bad clicks.</li>
+  <li><strong>Extra Quality Signals</strong>: on top of general sorting, <em>Vidhin's regexes</em> help <em>rate/identify quality releases and trusted groups</em> for even better ordering.</li>
+  <li><strong>Cleaner Source Selection UI</strong>: a <em>minimal, modern stream list view</em> with the info you actually need to choose fast.</li>
+  <li><strong>Netflix-like Automation</strong>: Trakt-driven <em>personal lists, watch tracking, and progress syncing</em> and a <em>full-blown suggestions engine with dynamic catalogs</em> based on what you watch and like, for a more "recommended and organized" experience.</li>
+  <li><strong>Richer Browsing</strong>: AIOMetadata gives <em>better catalogs + metadata integrations</em> (ratings, descriptions, artwork) and lets you <em>remove/replace Cinemeta clutter</em>.</li>
+</ul>
+
+  <p>So, now that you know, it's up to you, but if you're up for it, let's do it:</p>
+            
+<ul>
+  <li><a href="/0-Beginner-Concepts.html">🔰 Beginner Concepts</a></li>
+  <li><a href="/1-Accounts-Preparation.html">📝 1. Accounts Preparation</a></li>
+  <li><a href="/2-Stremio-Initialization.html">⚙️ 2. Stremio Account Initialization</a></li>
+  <li><a href="/3-AIOStreams-Setup.html">📚 3. AIOStreams [Find Streams]</a></li>
+  <li><a href="/4-AIOMetadata-Setup.html">🔎 4. AIOMetadata [Metadata & Catalogs]</a></li>
+  <li><a href="/5-Cinebye-Cleanup.html">🧹 5. Cinebye [Clean-Up]</a></li>
+  <li><a href="/6-Personalized-Lists.html">🤖 6. Personalized & Automated Lists</a></li>
+  <li><a href="/7-Additional-Stuff.html">🛠️ Additional Stuff</a></li>
+  <li><a href="/8-Configuration-QA.html">❓ Configuration Q&A</a></li>
+  <li><a href="/AIOManager-Setup.html">🎛️ AIOManager [Power Users]</a></li>
+  <li><a href="/Updates.html">🔔 Updates</a></li>
+</ul>
+
+        <section id="quick-nav" class="quick-nav" hidden>
+          <details id="quick-nav-details">
+            <summary>Quick Navigation</summary>
+            <ul id="quick-nav-list"></ul>
+          </details>
+        </section>
+        <nav id="pager" class="pager" aria-label="Page navigation" hidden></nav>
+      </article>
+    </main>
+  </div>
+
+  <script src="/assets/js/navigation.js"></script>
+  <script src="/assets/js/checklist.js"></script>
+  <script src="/assets/js/image-toggle.js"></script>
+</body>
+</html>
