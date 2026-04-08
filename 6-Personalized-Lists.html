@@ -1,79 +1,131 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personalized Lists</title>
-    <link rel="stylesheet" href="/assets/css/style.css">
-  </head>
-  <body for="html-export">
-    <main id="doc-card">   
-      <h1 id="-6-personalized--automated-lists">🤖 6. Personalized &amp; Automated Lists </h1>
-      <p>At this point you are done, YAY!, so you can start enjoying it already OR you can do one more step if you want proper custom lists that are specifically made for you (like Netflix suggestions). There are two approaches for this:</p>
-      <ol>
-      <li><strong>Watchly</strong> is a full-blown recommendations addon that provides real Netflix-like suggestions, and multiple dynamic catalogs depending on what you watch and like. I would recommend this more if you want extensive suggestions, but these catalogs are only on Stremio, they are not Trakt lists, so in case you need the lists for some purpose outside Stremio, you can't.</li>
-      <li><strong>CouchMoney</strong> creates personalized Trakt lists, which is a good basic setup, but since Trakt allows only 2 lists for free users, it might be limiting for some.</li>
-      </ol>
-      <p>So you can decide which you want to use (or both!) and here are the steps for each:</p>
-      <ul>
-      <li>
-      <p><strong>Watchly</strong>:</p>
-      <ol>
-      <li>Go to <a href="https://watchly.elfhosted.com/"><strong>this</strong></a> <strong>Watchly</strong> instance.</li>
-      <li>Click on "<strong>Get Started</strong>".</li>
-      <li>Login with your Stremio account email and password (recommended), OR click on "<strong>Login with Stremio</strong>", sign in to your Stremio account, and click "<strong>Accept</strong>" to allow Watchly to connect to your account (the second approach may expire in the future and you may need to log in again).</li>
-      <li>You will then land on the Watchly "<strong>Preferences</strong>" page. Configure according to your personal preferences here.</li>
-      <li>Scroll down and enter the <strong>RPDB</strong>, <strong>TMDB</strong>, <strong>Simkl</strong> (Optional), and <strong>Gemini</strong> <em>API Keys</em> in the respective fields.</li>
-      <li>Click on "<strong>Next: Catalogs</strong>" and configure catalogs here also according to your personal preferences.</li>
-      <li>Click on "<strong>Next: Install</strong>" and click on "<strong>Save &amp; Install</strong>".</li>
-      <li>Click "<strong>Install on Web</strong>" and install the addon on Stremio.</li>
-      </ol>
-      <ul>
-      <li><em><strong>Notes:</strong></em>
-      <ul>
-      <li><em>If you want these Watchly catalogs to show on top (which you'll probably want), go to Cinebye again and change the order of the addons by putting Watchly second, after Cinemeta and before AIOMetadata.</em></li>
-      <li><em>If your Stremio account is new, it will not have a watch history yet, so you may get "Failed to fetch" or similar issues on the Watchly catalogs when showing on Stremio. Don't worry, they should show up properly once it has enough information to personalize your lists.</em></li>
-      </ul>
-      </li>
-      </ul>
-      <p><img src="..\assets\images\6.1.png" alt="Watchly"></p>
-      </li>
-      <li>
-      <p><strong>CouchMoney</strong>:</p>
-      <ol>
-      <li>Go to <a href="https://couchmoney.tv/"><strong>CouchMoney</strong></a> and click "<strong>Login with Trakt</strong>".</li>
-      <li>Follow the steps to connect your Trakt account.</li>
-      <li>CouchMoney will create two lists for you based on your Trakt watch history and ratings, which you can customize further if you want on this page.</li>
-      <li>Go to your AIOMetadata account and sign in if needed (top right there's a sign in button) with your AIOMetadata credentials.</li>
-      <li>Go to the "<strong>Catalogs</strong>" tab and click on the Trakt icon.</li>
-      <li>You should already be connected to your Trakt account here, so scroll down to the "<strong>Import Lists from Trakt User</strong>" section.</li>
-      <li>Search for your Trakt username (which you can set/check in your Trakt account settings).</li>
-      <li>The lists created by CouchMoney should show up here.</li>
-      <li>Add them to your Catalog and order them as you wish.</li>
-      </ol>
-      <ul>
-      <li><em><strong>Note:</strong> As mentioned above, when you change catalog structure in AIOMetadata, go back to Cinebye, authenticate again with Stremio credentials, and click the <strong>Refresh</strong> icon to the right of AIOMetadata in the "<strong>Manage Addons</strong>" section.</em></li>
-      </ul>
-      <p><img src="..\assets\images\6.2.png" alt="CouchMoney"></p>
-      </li>
-      <li>
-      <p><strong>Watch Next</strong> [<em>Honorable Mention</em>]:</p>
-      <ul>
-      <li><strong>Watch Next</strong> is a very cool and simple addon that can show similar/related content directly on the page of the current show you're watching, similar to e.g. Netflix's "<em>More Like This</em>" feature. It doesn't need any configuration, it just works as-is once you install it very easily:</li>
-      <li>Open <a href="https://099757617587-watch-next.baby-beamup.club/"><strong>this</strong></a> link, click on "<strong>Install Add-On</strong>", and install on Stremio. That's it!</li>
-      <li>If it doesn't work, maybe because you don't have the Stremio app installed and need to install it manually, then do this:
-      <ol>
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>🧹 5. Cinebye [Clean-Up] | Stremio Perfect Setup</title>
+  <meta name="description" content="Full and Easy Total Beginner's Guide">
+  <link rel="icon" href="/assets/images/sps-logo.svg" type="image/svg+xml">
+  <link rel="shortcut icon" href="/assets/images/sps-logo.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/images/sps-logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script src="/assets/js/theme.js"></script>"
+
+</head>
+<body>
+  <header class="topbar">
+    <button class="icon-btn" id="nav-toggle" aria-label="Open navigation" aria-controls="sidebar" aria-expanded="false">☰</button>
+    <a class="topbar-brand" href="/index.html">
+      <img src="/assets/images/sps-logo.svg" alt="Stremio logo" class="topbar-logo">
+      <span class="topbar-brand-text">
+        <span class="topbar-title">Stremio Perfect Setup Collector's Edition</span>
+        <span class="topbar-subtitle">Full and Easy Total Beginner's Guide</span>
+      </span>
+    </a>
+    <button class="icon-btn" id="theme-toggle" aria-label="Toggle theme" aria-pressed="false">◐</button>
+  </header>
+
+  <button class="nav-backdrop" id="nav-backdrop" aria-hidden="true"></button>
+
+  <button></button> id="nav-backdrop" class="nav-backdrop" aria-hidden="true"</button>
+
+  <aside class="sidebar" id="sidebar" aria-label="Guide navigation">
+    <div class="sidebar__inner">
+      <nav id="sidebar-nav"></nav>
+    </div>
+  </aside>
+
+  <div class="layout">
+    <main id="main-content" class="content">
+      <article class="doc-card fade-in">
+        <h1 id="-6-personalized--automated-lists">🤖 6. Personalized &amp; Automated Lists </h1>
+      
+      
+
+<p>At this point you are done, YAY!, so you can start enjoying it already OR you can do one more step if you want proper custom lists that are specifically made for you (like Netflix suggestions):</p>
+
+<p><strong>Watchly</strong> is a full-blown recommendations addon that provides real Netflix-like suggestions, and multiple dynamic catalogs depending on what you watch and like. Here are the steps to set it up:</p>
+
+<ol>
+  <li>Go to <a href="https://watchly.elfhosted.com/"><strong>this</strong></a> <strong>Watchly</strong> instance.</li>
+  <li>Click on “<strong>Get Started</strong>”.</li>
+  <li>Login with your Stremio account email and password (recommended), OR click on “<strong>Login with Stremio</strong>”, sign in to your Stremio account, and click “<strong>Accept</strong>” to allow Watchly to connect to your account (the second approach may expire in the future and you may need to log in again).</li>
+  <li>You will then land on the Watchly “<strong>Preferences</strong>” page. Configure according to your personal preferences here.</li>
+  <li>Scroll down and enter the <strong>RPDB</strong>, <strong>TMDB</strong>, <strong>Simkl</strong> (Optional), and <strong>Gemini</strong> <em>API Keys</em> in the respective fields.</li>
+  <li>Click on “<strong>Next: Catalogs</strong>” and configure catalogs here also according to your personal preferences.</li>
+  <li>Click on “<strong>Next: Install</strong>” and click on “<strong>Save &amp; Install</strong>”.</li>
+  <li>Click “<strong>Install on Web</strong>” and install the addon on Stremio.
+    <ul>
+      <li><strong><em>Notes:</em></strong></li>
+    </ul>
+    <ul>
+      <li><em>If you want these Watchly catalogs to show on top (which you’ll probably want), go to Cinebye again and change the order of the addons by putting Watchly second, after Cinemeta and before AIOMetadata.</em></li>
+      <li><em>If your Stremio account is new, it will not have a watch history yet, so you may get “Failed to fetch” or similar issues on the Watchly catalogs when showing on Stremio. Don’t worry, they should show up properly once it has enough information to personalize your lists.</em></li>
+    </ul>
+  </li>
+</ol>
+
+<p><img src="/assets/images/6.1.png" alt="Watchly" /></p>
+
+<p><strong>Recommended</strong>:</p>
+
+<p><strong>Watch Next</strong> is a very cool and simple addon that can show similar/related content directly on the page of the current show you’re watching, similar to e.g. Netflix’s “<em>More Like This</em>” feature. It doesn’t need any configuration, it just works as-is once you install it very easily:</p>
+<ul>
+  <li>Open <a href="https://099757617587-watch-next.baby-beamup.club/"><strong>this</strong></a> link, click on “<strong>Install Add-On</strong>”, and install on Stremio. That’s it!</li>
+  <li>If it doesn’t work, maybe because you don’t have the Stremio app installed and need to install it manually, then do this:
+    <ol>
       <li>Go directly to <a href="https://web.stremio.com/#/addons"><strong>Addons in Stremio Web</strong></a> or open your Stremio app and go to <strong>Addons</strong>.</li>
-      <li>Click on "<strong>Add Addon</strong>" and paste <a href="https://099757617587-watch-next.baby-beamup.club/manifest.json"><strong>this</strong></a> link on the field.</li>
-      <li>Click "<strong>Add</strong>" and that's it!</li>
-      </ol>
-      </li>
-      <li>Now, every time you open a show, beside the <strong>AIOStreams</strong> tab which will show the available streams for it, there will also be a "<strong>Watch Next</strong>" tab showing similar/related content that you might like.</li>
-      </ul>
-      <p><img src="..\assets\images\6.3.png" alt="Watch Next"></p>
-      </li>
-      </ul>
-      <p>And now you're really done! Check out the <a href="8-Configuration-QA.md"><strong>❓ Configuration Q&amp;A</strong></a> and <a href="7-Additional-Stuff.md"><strong>🛠️ Additional Stuff</strong></a> if you want to tweak it further.</p>
+      <li>Click on “<strong>Add Addon</strong>” and paste <a href="https://099757617587-watch-next.baby-beamup.club/manifest.json"><strong>this</strong></a> link on the field.</li>
+      <li>Click “<strong>Add</strong>” and that’s it!</li>
+    </ol>
+  </li>
+  <li>Now, every time you open a show, beside the <strong>AIOStreams</strong> tab which will show the available streams for it, there will also be a “<strong>Watch Next</strong>” tab showing similar/related content that you might like.</li>
+</ul>
+
+<p><img src="/assets/images/6.3.png" alt="Watch Next" /></p>
+
+<p><strong>Worth Mentioning</strong>:</p>
+
+<p><strong>CouchMoney</strong> creates personalized Trakt lists, which is a good basic setup, but since Trakt allows only 2 lists for free users, it might be limiting for some.</p>
+<ol>
+  <li>Go to <a href="https://couchmoney.tv/"><strong>CouchMoney</strong></a> and click “<strong>Login with Trakt</strong>”.</li>
+  <li>Follow the steps to connect your Trakt account.</li>
+  <li>CouchMoney will create two lists for you based on your Trakt watch history and ratings, which you can customize further if you want on this page.</li>
+  <li>Go to your AIOMetadata account and sign in if needed (top right there’s a sign in button) with your AIOMetadata credentials.</li>
+  <li>Go to the “<strong>Catalogs</strong>” tab and click on the Trakt icon.</li>
+  <li>You should already be connected to your Trakt account here, so scroll down to the “<strong>Import Lists from Trakt User</strong>” section.</li>
+  <li>Search for your Trakt username (which you can set/check in your Trakt account settings).</li>
+  <li>The lists created by CouchMoney should show up here.</li>
+  <li>Add them to your Catalog and order them as you wish.
+    <ul>
+      <li><em><strong>Note:</strong> As mentioned above, when you change catalog structure in AIOMetadata, go back to Cinebye, authenticate again with Stremio credentials, and click the <strong>Refresh</strong> icon to the right of AIOMetadata in the “<strong>Manage Addons</strong>” section.</em></li>
+    </ul>
+  </li>
+</ol>
+
+<p><img src="/assets/images/6.2.png" alt="CouchMoney" /></p>
+
+<p>And now you’re really done! Check out the <a href="/8-Configuration-QA.html"><strong>❓ Configuration Q&amp;A</strong></a> and <a href="/7-Additional-Stuff.html"><strong>🛠️ Additional Stuff</strong></a> if you want to tweak it further.</p>
+
+
+
+        <section class="quick-nav" id="quick-nav" hidden>
+          <details id="quick-nav-details">
+            <summary>Quick Navigation</summary>
+            <ul id="quick-nav-list"></ul>
+          </details>
+        </section>
+        <nav class="pager" id="pager" aria-label="Page navigation" hidden></nav>
+      </article>
     </main>
-  </body>
+  </div>
+
+  <script src="/assets/js/navigation.js"></script>
+  <script src="/assets/js/checklist.js"></script>
+  <script src="/assets/js/markdown.js"></script>
+</body>
 </html>

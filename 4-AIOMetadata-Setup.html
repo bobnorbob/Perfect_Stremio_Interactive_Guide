@@ -1,89 +1,145 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AIOMetadata Setup</title>
-    <link rel="stylesheet" href="/assets/css/style.css">
-  </head>
-  <body for="html-export">
-    <main id="doc-card">
-      <h1 id="-4-aiometadata-metadata--catalogs">🔎 4. AIOMetadata [Metadata &amp; Catalogs] </h1>
-      <p><strong>AIOMetadata</strong> is the metadata and catalogs layer. It improves discovery by powering richer catalogs, search behavior, and integrations, so browsing titles in Stremio feels more complete and organized.</p>
-      <p>Select an <strong>AIOMetadata</strong> instance from <a href="https://status.stremio-status.com/"><strong>this</strong></a> or <a href="https://status.dinsden.top/status/stremio-addons"><strong>this</strong></a> link (they both show the same instances and their online status, it's just two different sources) and:</p>
-      <blockquote>
-      <p><strong>WARNING:</strong></p>
-      <ul>
-      <li><em>If you want to understand more what an instance means, go to</em> <a href="0-Beginner-Concepts.md#what-does-an-addon-instance-mean"><strong>🔰 Beginner Concepts</strong></a>.</li>
-      <li><em><a href="https://aiometadata.viren070.me/"><strong>Viren's</strong></a> or <a href="https://aiometadatafortheweebs.midnightignite.me/"><strong>Midnight's</strong></a> are some of the most popular, so you can open these links directly, but almost all are viable options.</em></li>
-      <li><em>Choose one of the instances and stick with it, you will store your configuration here, and if you change to the other instance, you'll need to transfer your configuration because it's not automatically transferred.</em></li>
-      <li><em>You can keep the monitoring links above for later to check the instance online status, if it happens that it's not working and might be temporarily down.</em></li>
-      </ul>
-      </blockquote>
-      <ol>
-      <li>
-      <p>Download my configuration file <a href="https://raw.githubusercontent.com/luckynumb3rs/stremio-perfect-setup/refs/heads/main/templates/AIOMetadata.json"><strong>here</strong></a> (right-click, "<em>Save As</em>", and save it as <code>.json</code>, not <code>.txt</code>).</p>
-      </li>
-      <li>
-      <p>Go to the "<strong>Configuration</strong>" tab, click on "<strong>Import Configuration</strong>", and load my configuration file.</p>
-      <p><img src="..\assets\images\4.2.png" alt="Import Configuration"></p>
-      </li>
-      <li>
-      <p>Go to the "<strong>Integrations</strong>" tab, and enter the API keys for Gemini, TMDB, TheTVDB, RPDB.</p>
-      <ul>
-      <li><em>For <strong>RPDB</strong>, unless you have an account and a paid subscription with your own API key, you can also use the free standard API Key "t0-free-rpdb" directly.</em></li>
-      </ul>
-      <p><img src="..\assets\images\4.3.png" alt="API Keys"></p>
-      </li>
-      <li>
-      <p>Go to the "<strong>Catalogs</strong>" tab, and near the "Quick Add" button, you will see the <strong>Trakt</strong> icon. Click on it and follow the steps to connect your Trakt account.</p>
-      <p><img src="..\assets\images\4.4.png" alt="Trakt Integration"></p>
-      <ul>
-      <li><em>If you want some ready-to-use and well-maintained lists, while on the Trakt tab, search for the lists from user "snoak", and you will be able to import a lot of interesting lists. I have already included some of them in the catalog, but you can add more.</em></li>
-      <li><strong>For Anime users</strong>: <em>If you want to enable search for Anime, make sure to go to to the "Search" tab and enable both "Anime Search Engine" switches.</em></li>
-      </ul>
-      <p><img src="..\assets\images\4.4.2.png" alt="Anime Search"></p>
-      <ul>
-      <li><strong>For other languages</strong>: <em>If you want the metadata (descriptions, titles, etc.) to show in a different language than English, go to the "General" tab and change the "Display Language".</em></li>
-      </ul>
-      <p><img src="..\assets\images\4.4.3.png" alt="Display Language"></p>
-      <ul>
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>📚 3. AIOStreams [Find Streams] | Stremio Perfect Setup</title>
+  <meta name="description" content="Full and Easy Total Beginner's Guide">
+  <link rel="icon" href="/assets/images/sps-logo.svg" type="image/svg+xml">
+  <link rel="shortcut icon" href="/assets/images/sps-logo.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/images/sps-logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script src="/assets/js/theme.js"></script>
+  
+</head>
+<body>
+  <header class="topbar">
+    <button class="icon-btn" id="nav-toggle" aria-label="Open navigation" aria-controls="sidebar" aria-expanded="false">☰</button>
+    <a class="topbar-brand" href="/index.html">
+      <img src="/assets/images/sps-logo.svg" alt="Stremio logo" class="topbar-logo">
+      <span class="topbar-brand-text">
+        <span class="topbar-title">Stremio Perfect Setup Collector's Edition</span>
+        <span class="topbar-subtitle">Full and Easy Total Beginner's Guide</span>
+      </span>
+    </a>
+    <button class="icon-btn" id="theme-toggle" aria-label="Toggle theme" aria-pressed="false">◐</button>
+  </header>
+
+  <button></button> id="nav-backdrop" class="nav-backdrop" aria-hidden="true"</button>
+
+  <aside class="sidebar" id="sidebar" aria-label="Guide navigation">
+    <div class="sidebar__inner">
+      <nav id="sidebar-nav"></nav>
+    </div>
+  </aside>
+
+  <div class="layout">
+    <main id="main-content" class="content">
+      <article class="doc-card fade-in">
+        <h1 id="-4-aiometadata-metadata--catalogs">🔎 4. AIOMetadata [Metadata &amp; Catalogs] </h1>
+
+
+<p><strong>AIOMetadata</strong> is the metadata and catalogs layer. It improves discovery by powering richer catalogs, search behavior, and integrations, so browsing titles in Stremio feels more complete and organized.</p>
+
+<p>Select an <strong>AIOMetadata</strong> instance from <a href="https://uptime.ibbylabs.dev/#group-aiometadata"><strong>this</strong></a> or <a href="https://status.dinsden.top/status/stremio-addons"><strong>this</strong></a> link (they both show the same instances and their online status, it’s just two different sources), or go directly to <a href="https://aiometadata.viren070.me/"><strong>Viren’s</strong></a> or <a href="https://aiometadatafortheweebs.midnightignite.me/"><strong>Midnight’s</strong></a> instance (two of the most popular ones) and:</p>
+
+<blockquote>
+  <p><strong>WARNING:</strong></p>
+  <ul>
+    <li><em>If you want to understand more what an instance means, go to</em> <a href="/0-Beginner-Concepts.html#what-does-an-addon-instance-mean"><strong>🔰 Beginner Concepts</strong></a>.</li>
+    <li><em>Choose one of the instances and stick with it, you will store your configuration here, and if you change to the other instance, you’ll need to transfer your configuration because it’s not automatically transferred.</em></li>
+    <li><em>You can keep the monitoring links above for later to check the instance online status, if it happens that it’s not working and might be temporarily down.</em></li>
+  </ul>
+</blockquote>
+
+<ol>
+  <li>Download my configuration file <a href="/assets/templates/AIOMetadata.json"><strong>here</strong></a> (right-click, “<em>Save As</em>”, and save it as <code class="language-plaintext highlighter-rouge">.json</code>, not <code class="language-plaintext highlighter-rouge">.txt</code>).</li>
+  <li>
+    <p>Go to the “<strong>Configuration</strong>” tab, click on “<strong>Import Configuration</strong>”, and load my configuration file.</p>
+
+    <p><img src="/assets/images/4.2.png" alt="Import Configuration" /></p>
+  </li>
+  <li>Go to the “<strong>Integrations</strong>” tab, and enter the API keys for Gemini, TMDB, TheTVDB, RPDB.
+    <ul>
+      <li><em>For <strong>RPDB</strong>, unless you have an account and a paid subscription with your own API key, you can also use the free standard API Key “t0-free-rpdb” directly.</em></li>
+    </ul>
+
+    <p><img src="/assets/images/4.3.png" alt="API Keys" /></p>
+  </li>
+  <li>
+    <p>Go to the “<strong>Catalogs</strong>” tab, and near the “Quick Add” button, you will see the <strong>Trakt</strong> icon. Click on it and follow the steps to connect your Trakt account.</p>
+
+    <p><img src="/assets/images/4.4.png" alt="Trakt Integration" /></p>
+
+    <ul>
+      <li><em>If you want some ready-to-use and well-maintained lists, while on the Trakt tab, search for the lists from user “snoak”, and you will be able to import a lot of interesting lists. I have already included some of them in the catalog, but you can add more.</em></li>
+      <li><strong>For Anime users</strong>: <em>If you want to enable search for Anime, make sure to go to to the “Search” tab and enable both “Anime Search Engine” switches.</em></li>
+    </ul>
+
+    <p><img src="/assets/images/4.4.2.png" alt="Anime Search" /></p>
+
+    <ul>
+      <li><strong>For other languages</strong>: <em>If you want the metadata (descriptions, titles, etc.) to show in a different language than English, go to the “General” tab and change the “Display Language”.</em></li>
+    </ul>
+
+    <p><img src="/assets/images/4.4.3.png" alt="Display Language" /></p>
+
+    <ul>
       <li><strong>NOTES</strong>:
-      <ul>
-      <li><em>If you encounter any issues with Trakt integration on AIOMetadata, it's probably because Trakt is rate limiting the instance you're using, or the instance provider has disabled it (if it says "Instance owner has not yet set up the Trakt integration."). In that case, try to do the AIOMetadata setup with another instance.</em></li>
-      <li><em>Alternatively, you can leave Trakt integration disabled, and hide the Trakt catalogs on the list (marked with a red <strong>Trakt</strong> tag on the right) by clicking the green eye icon for each. I know it's not ideal since you created a Trakt account already, but there's nothing we can do about it. You can still add other catalogs from the other sources there.</em></li>
-      <li><em>There are also good alternatives to Trakt if you disable it, both for watch history tracking, and curated catalogs, which you can check out in <a href="7-Additional-Stuff.md#enriching-your-catalogs-trakt-alternatives"><strong>🛠️ Additional Stuff</strong></a>.</em></li>
-      </ul>
+        <ul>
+          <li><em>If you encounter any issues with Trakt integration on AIOMetadata, it’s probably because Trakt is rate limiting the instance you’re using, or the instance provider has disabled it (if it says “Instance owner has not yet set up the Trakt integration.”). In that case, try to do the AIOMetadata setup with another instance.</em></li>
+          <li><em>Alternatively, you can leave Trakt integration disabled, and hide the Trakt catalogs on the list (marked with a red <strong>Trakt</strong> tag on the right) by clicking the green eye icon for each. I know it’s not ideal since you created a Trakt account already, but there’s nothing we can do about it. You can still add other catalogs from the other sources there.</em></li>
+          <li><em>There are also good alternatives to Trakt if you disable it, both for watch history tracking, and curated catalogs, which you can check out in <a href="/7-Additional-Stuff.html#enriching-your-catalogs-trakt-alternatives"><strong>🛠️ Additional Stuff</strong></a>.</em></li>
+        </ul>
       </li>
-      </ul>
-      <p><img src="..\assets\images\4.4.1.png" alt="Trakt Disable"></p>
-      </li>
-      <li>
-      <p><strong>Optional</strong>: At this point AIOMetadata is ready, but you can keep configuring it however you like, but otherwise the configuration I provided is ready to be used. On the "<strong>Catalogs</strong>" tab you can add, remove, enable, disable catalogs depending on your preferences.</p>
-      </li>
-      <li>
-      <p>Go to the "<strong>Configuration</strong>" tab again and click on "<strong>Save Configuration</strong>".</p>
-      <ul>
+    </ul>
+
+    <p><img src="/assets/images/4.4.1.png" alt="Trakt Disable" /></p>
+  </li>
+  <li><strong>Optional</strong>: At this point AIOMetadata is ready, but you can keep configuring it however you like, but otherwise the configuration I provided is ready to be used. On the “<strong>Catalogs</strong>” tab you can add, remove, enable, disable catalogs depending on your preferences.</li>
+  <li>Go to the “<strong>Configuration</strong>” tab again and click on “<strong>Save Configuration</strong>”.
+    <ul>
       <li><strong>ALWAYS SAVE IN THIS TAB EVERY TIME YOU MAKE CHANGES LATER.</strong></li>
       <li><em>Copy and store the <strong>UUID</strong> that is shown and the <strong>Password</strong> you set for later to access the configuration again. This is basically your AIOMetadata account.</em></li>
-      </ul>
-      </li>
-      <li>
-      <p>Click "<strong>Install</strong>" and install the addon on <strong>Stremio Web</strong> (recommended, but you can also install on Stremio app if you want, but make sure you're signed in to your Stremio account wherever you install it).</p>
-      <ul>
-      <li><em>If you get a "AddonsPushedToAPI Max descriptor size reached" error when installing, you probably have too many catalogs on AIOMetadata. Disable some, save the configuration, and try to install it again.</em></li>
-      <li><em>If you didn't want to get an API key for Gemini, go to the <strong>Search</strong> tab and disable <strong>AI-Powered Search</strong> to be able to save.</em></li>
-      </ul>
-      <p><img src="..\assets\images\4.7.png" alt="Install Addon"></p>
-      </li>
-      </ol>
-      <blockquote>
-      <p><strong>NOTES FOR LATER:</strong></p>
-      <ul>
-      <li><em>Keep in mind for later that if you change catalog structure in AIOMetadata after you installed it on Stremio, or if you add the CouchMoney lists from Step 6 below, then go to Cinebye, authenticate again with Stremio credentials, and click the <strong>Refresh</strong> icon to the right of AIOMetadata in the "<strong>Manage Addons</strong>" section.</em><br>
-      <img src="..\assets\images\5.6.png" alt="Refresh Addons"></li>
-      </ul>
-      </blockquote>
+    </ul>
+  </li>
+  <li>Click “<strong>Install</strong>” and install the addon on <strong>Stremio Web</strong> (recommended, but you can also install on Stremio app if you want, but make sure you’re signed in to your Stremio account wherever you install it).
+    <ul>
+      <li><em>If you get a “AddonsPushedToAPI Max descriptor size reached” error when installing, you probably have too many catalogs on AIOMetadata. Disable some, save the configuration, and try to install it again.</em></li>
+      <li><em>If you didn’t want to get an API key for Gemini, go to the <strong>Search</strong> tab and disable <strong>AI-Powered Search</strong> to be able to save.</em></li>
+    </ul>
+
+    <p><img src="/assets/images/4.7.png" alt="Install Addon" /></p>
+  </li>
+</ol>
+
+<blockquote>
+  <p><strong>NOTES FOR LATER:</strong></p>
+  <ul>
+    <li><em>Keep in mind for later that if you change catalog structure in AIOMetadata after you installed it on Stremio, or if you add the CouchMoney lists from Step 6 below, then go to Cinebye, authenticate again with Stremio credentials, and click the <strong>Refresh</strong> icon to the right of AIOMetadata in the “<strong>Manage Addons</strong>” section.</em>
+<img src="/assets/images/5.6.png" alt="Refresh Addons" /></li>
+  </ul>
+</blockquote>
+
+
+
+        <section class="quick-nav" id="quick-nav" hidden>
+          <details id="quick-nav-details">
+            <summary>Quick Navigation</summary>
+            <ul id="quick-nav-list"></ul>
+          </details>
+        </section>
+        <nav class="pager" id="pager" aria-label="Page navigation" hidden></nav>
+      </article>
     </main>
-  </body>
+  </div>
+
+  <script src="/assets/js/navigation.js"></script>
+  <script src="/assets/js/checklist.js"></script>
+  <script src="/assets/js/markdown.js"></script>
+</body>
 </html>

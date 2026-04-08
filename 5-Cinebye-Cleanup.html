@@ -1,57 +1,111 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cinebye Cleanup</title>
-    <link rel="stylesheet" href="/assets/css/style.css">
-  </head>
-  <body for="html-export">
-    <main id="doc-card">      
-      <h1 id="-5-cinebye-clean-up">🧹 5. Cinebye [Clean-Up] </h1>
-      <p>Cinebye is the addon order and patch management layer for Stremio. It lets you apply cleanup patches and control addon priority so AIOMetadata and AIOStreams are used in the right order.</p>
-      <p>Go to <a href="https://cinebye.elfhosted.com/"><strong>this</strong></a> <strong>Cinebye</strong> instance and:</p>
-      <ol>
-      <li>
-      <p>Sign in with your Stremio account details.</p>
-      <ol>
-      <li>OR if you don't want to use your credentials directly, there is a more complicated approach:</li>
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>🧹 5. Cinebye [Clean-Up] | Stremio Perfect Setup</title>
+  <meta name="description" content="Full and Easy Total Beginner's Guide">
+  <link rel="icon" href="/assets/images/sps-logo.svg" type="image/svg+xml">
+  <link rel="shortcut icon" href="/assets/images/sps-logo.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/images/sps-logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script src="/assets/js/theme.js"></script>"
+
+</head>
+<body>
+  <header class="topbar">
+    <button class="icon-btn" id="nav-toggle" aria-label="Open navigation" aria-controls="sidebar" aria-expanded="false">☰</button>
+    <a class="topbar-brand" href="/index.html">
+      <img src="/assets/images/sps-logo.svg" alt="Stremio logo" class="topbar-logo">
+      <span class="topbar-brand-text">
+        <span class="topbar-title">Stremio Perfect Setup Collector's Edition</span>
+        <span class="topbar-subtitle">Full and Easy Total Beginner's Guide</span>
+      </span>
+    </a>
+    <button class="icon-btn" id="theme-toggle" aria-label="Toggle theme" aria-pressed="false">◐</button>
+  </header>
+
+  <button class="nav-backdrop" id="nav-backdrop" aria-hidden="true"></button>
+
+  <button></button> id="nav-backdrop" class="nav-backdrop" aria-hidden="true"</button>
+
+  <aside class="sidebar" id="sidebar" aria-label="Guide navigation">
+    <div class="sidebar__inner">
+      <nav id="sidebar-nav"></nav>
+    </div>
+  </aside>
+
+  <div class="layout">
+    <main id="main-content" class="content">
+      <article class="doc-card fade-in">
+        <h1 id="-5-cinebye-clean-up">🧹 5. Cinebye [Clean-Up] </h1>
+      
+<p>Cinebye is the addon order and patch management layer for Stremio. It lets you apply cleanup patches and control addon priority so AIOMetadata and AIOStreams are used in the right order.</p>
+
+<p>Go to <a href="https://cinebye.elfhosted.com/"><strong>this</strong></a> <strong>Cinebye</strong> instance and:</p>
+
+<ol>
+  <li>Sign in with your Stremio account details.
+    <ol>
+      <li>OR if you don’t want to use your credentials directly, there is a more complicated approach:</li>
       <li>Login to <a href="https://web.stremio.com/"><strong>Stremio Web</strong></a> using your credentials in your browser.</li>
-      <li>Open the developer console (F12 on Chrome) and paste this code snippet: <code>JSON.parse(localStorage.getItem("profile")).auth.key</code></li>
-      <li>Take the output value and paste it in Cinebye where it says "<em>Paste Stremio AuthKey here...</em>".</li>
+      <li>Open the developer console (F12 on Chrome) and paste this code snippet: <code class="language-plaintext highlighter-rouge">JSON.parse(localStorage.getItem("profile")).auth.key</code></li>
+      <li>Take the output value and paste it in Cinebye where it says “<em>Paste Stremio AuthKey here…</em>”.</li>
       <li>Press <strong>Enter</strong> or click <strong>Login</strong>.</li>
-      </ol>
-      <p><img src="..\assets\images\5.1.png" alt="Sign In"></p>
-      </li>
-      <li>
-      <p>Once authenticated and the options become available, in section "<strong>2 - Options</strong>" you can download a backup first just to be safe.</p>
-      </li>
-      <li>
-      <p>Enable all three patches: "<strong>Remove Cinemeta Search</strong>", "<strong>Remove Cinemeta Catalogs</strong>", and "<strong>Remove Cinemeta Metadata</strong>".</p>
-      <p><img src="..\assets\images\5.3.png" alt="Enable Patches"></p>
-      </li>
-      <li>
-      <p>Scroll down to "<strong>Manage Addons</strong>" and change the order of the addons to this:</p>
-      <ol>
+    </ol>
+
+    <p><img src="/assets/images/5.1.png" alt="Sign In" /></p>
+  </li>
+  <li>Once authenticated and the options become available, in section “<strong>2 - Options</strong>” you can download a backup first just to be safe.</li>
+  <li>
+    <p>Enable all three patches: “<strong>Remove Cinemeta Search</strong>”, “<strong>Remove Cinemeta Catalogs</strong>”, and “<strong>Remove Cinemeta Metadata</strong>”.</p>
+
+    <p><img src="/assets/images/5.3.png" alt="Enable Patches" /></p>
+  </li>
+  <li>Scroll down to “<strong>Manage Addons</strong>” and change the order of the addons to this:
+    <ol>
       <li><em>Cinemeta</em></li>
       <li><em>AIOMetadata</em></li>
       <li><em>AIOStreams</em></li>
       <li><em>Local Files</em></li>
-      </ol>
-      <p><img src="..\assets\images\5.4.png" alt="Order Addons"></p>
-      </li>
-      <li>
-      <p>Scroll back up to "<strong>3 - Sync Addons</strong>" and click on "<strong>Sync to Stremio</strong>".</p>
-      <p><img src="..\assets\images\5.5.png" alt="Sync Addons"></p>
-      </li>
-      </ol>
-      <blockquote>
-      <p><strong>NOTES FOR LATER:</strong></p>
-      <ul>
-      <li><em>Keep in mind for later that if you change catalog structure in AIOMetadata after you installed it on Stremio, or if you add the CouchMoney lists from Step 6 below, then go to Cinebye, authenticate again with Stremio credentials, and click the <strong>Refresh</strong> icon to the right of AIOMetadata in the "<strong>Manage Addons</strong>" section.</em><br>
-      <img src="..\assets\images\5.6.png" alt="Refresh Addons"></li>
-      </ul>
-      </blockquote>
+    </ol>
+
+    <p><img src="/assets/images/5.4.png" alt="Order Addons" /></p>
+  </li>
+  <li>
+    <p>Scroll back up to “<strong>3 - Sync Addons</strong>” and click on “<strong>Sync to Stremio</strong>”.</p>
+
+    <p><img src="/assets/images/5.5.png" alt="Sync Addons" /></p>
+  </li>
+</ol>
+
+<blockquote>
+  <p><strong>NOTES FOR LATER:</strong></p>
+  <ul>
+    <li><em>Keep in mind for later that if you change catalog structure in AIOMetadata after you installed it on Stremio, or if you add the CouchMoney lists from Step 6 below, then go to Cinebye, authenticate again with Stremio credentials, and click the <strong>Refresh</strong> icon to the right of AIOMetadata in the “<strong>Manage Addons</strong>” section.</em>
+<img src="/assets/images/5.6.png" alt="Refresh Addons" /></li>
+  </ul>
+</blockquote>
+
+
+
+        <section class="quick-nav" id="quick-nav" hidden>
+          <details id="quick-nav-details">
+            <summary>Quick Navigation</summary>
+            <ul id="quick-nav-list"></ul>
+          </details>
+        </section>
+        <nav class="pager" id="pager" aria-label="Page navigation" hidden></nav>
+      </article>
     </main>
-  </body>
+  </div>
+
+  <script src="/assets/js/navigation.js"></script>
+  <script src="/assets/js/checklist.js"></script>
+  <script src="/assets/js/markdown.js"></script>
+</body>
 </html>
