@@ -1,165 +1,218 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AIOManager Setup</title>
-    <link rel="stylesheet" href="..\assets\css\style.css">
-  </head>
-  <body for="html-export">
-    <main id="doc-card">      
-      <h1 id="️-aiomanager-power-users">🎛️ AIOManager [Power Users] </h1>
-      <p><strong>AIOManager</strong> is fully optional and intended for power users who want to push their setup further by creating redundant, resilient configurations. If you are looking to increase reliability, add fallback layers, or manage multiple Stremio accounts in a structured way, this chapter is for you.</p>
-      <p>Let's start with what <strong>AIOManager</strong> can do for you:</p>
-      <ul>
-      <li><strong>Multi-Account Management</strong>: Control and sync addons for multiple Stremio accounts from one central place.</li>
-      <li><strong>Addon Backup &amp; Redeployment</strong>: Save complete addon configurations and redeploy them anywhere in seconds.</li>
-      <li><strong>Bulk Actions &amp; Profiles</strong>: Install, remove, clone, or push entire addon collections across accounts with a single action.</li>
-      <li><strong>Order Replication</strong>: Copy and apply the exact same addon order to maintain a consistent interface everywhere.</li>
-      <li><strong>Multiple Instances of the Same Addon</strong>: Run parallel configurations of one addon with different settings or API keys.</li>
-      <li><strong>Automatic Failover</strong>: Switch to backup addons when a primary one goes offline to increase reliability.</li>
-      <li><strong>Library Organization</strong>: Tag and structure saved addons for faster searching and cleaner management.</li>
-      <li><strong>Granular Control &amp; Customization</strong>: Rename, reorder, and fine-tune how addons behave in your setup.</li>
-      <li><strong>Activity Visibility</strong>: Access optional usage insights, dashboards, and fun statistics based on your watch history.</li>
-      </ul>
-      <h2 id="initial-setup">Initial Setup </h2>
-      <p>And now let's start by going to either <a href="https://aiomanagerfortheweebs.midnightignite.me/"><strong>this</strong></a> or <a href="https://aiomanager.elfhosted.com/"><strong>this</strong></a> instance and:</p>
-      <ol>
-      <li>Select "<strong>New Account</strong>", enter a password twice (<em>at least 10 characters</em>), and click on "<strong>Create &amp; Enter</strong>".</li>
-      <li>You will see a notification "<em>Account Successfully Created!</em>" on top of the page asking you to save your <strong>UUID</strong>. <strong>Store it</strong> somewhere safe together with the <strong>Password</strong> you set, and then click "<strong>I've Saved It</strong>".
-      <ul>
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>🛠️ Additional Stuff | Stremio Perfect Setup Collector's Edition</title>
+  <meta name="description" content="Full and Easy Total Beginner's Guide">
+  <link rel="icon" href="/assets/images/sps-logo.svg" type="image/svg+xml">
+  <link rel="shortcut icon" href="/assets/images/sps-logo.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/images/sps-logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script src="/assets/js/theme.js"></script>"
+
+</head>
+<body>
+  <header class="topbar">
+    <button class="icon-btn" id="nav-toggle" aria-label="Open navigation" aria-controls="sidebar" aria-expanded="false">☰</button>
+    <a class="topbar-brand" href="/index.html">
+      <img src="/assets/images/sps-logo.svg" alt="Stremio logo" class="topbar-logo">
+      <span class="topbar-brand-text">
+        <span class="topbar-title">Stremio Perfect Setup Collector's Edition</span>
+        <span class="topbar-subtitle">Full and Easy Total Beginner's Guide</span>
+      </span>
+    </a>
+    <button class="icon-btn" id="theme-toggle" aria-label="Toggle theme" aria-pressed="false">◐</button>
+  </header>
+
+  <button></button> id="nav-backdrop" class="nav-backdrop" aria-hidden="true"</button>
+
+  <aside class="sidebar" id="sidebar" aria-label="Guide navigation">
+    <div class="sidebar__inner">
+      <nav id="sidebar-nav"></nav>
+    </div>
+  </aside>
+
+  <div class="layout">
+    <main id="main-content" class="content">
+      <article class="doc-card fade-in">
+        <h1 id="️-aiomanager-power-users">🎛️ AIOManager [Power Users] </h1>
+      
+      
+<p><strong>AIOManager</strong> is fully optional and intended for power users who want to push their setup further by creating redundant, resilient configurations. If you are looking to increase reliability, add fallback layers, or manage multiple Stremio accounts in a structured way, this chapter is for you.</p>
+
+<p>Let’s start with what <strong>AIOManager</strong> can do for you:</p>
+<ul>
+  <li><strong>Multi-Account Management</strong>: Control and sync addons for multiple Stremio accounts from one central place.</li>
+  <li><strong>Addon Backup &amp; Redeployment</strong>: Save complete addon configurations and redeploy them anywhere in seconds.</li>
+  <li><strong>Bulk Actions &amp; Profiles</strong>: Install, remove, clone, or push entire addon collections across accounts with a single action.</li>
+  <li><strong>Order Replication</strong>: Copy and apply the exact same addon order to maintain a consistent interface everywhere.</li>
+  <li><strong>Multiple Instances of the Same Addon</strong>: Run parallel configurations of one addon with different settings or API keys.</li>
+  <li><strong>Automatic Failover</strong>: Switch to backup addons when a primary one goes offline to increase reliability.</li>
+  <li><strong>Library Organization</strong>: Tag and structure saved addons for faster searching and cleaner management.</li>
+  <li><strong>Granular Control &amp; Customization</strong>: Rename, reorder, and fine-tune how addons behave in your setup.</li>
+  <li><strong>Activity Visibility</strong>: Access optional usage insights, dashboards, and fun statistics based on your watch history.</li>
+</ul>
+
+<h2 id="initial-setup">Initial Setup</h2>
+
+<p>And now let’s start by going to either <a href="https://aiomanagerfortheweebs.midnightignite.me/"><strong>this</strong></a> or <a href="https://aiomanager.elfhosted.com/"><strong>this</strong></a> instance and:</p>
+
+<ol>
+  <li>Select “<strong>New Account</strong>”, enter a password twice (<em>at least 10 characters</em>), and click on “<strong>Create &amp; Enter</strong>”.</li>
+  <li>You will see a notification “<em>Account Successfully Created!</em>” on top of the page asking you to save your <strong>UUID</strong>. <strong>Store it</strong> somewhere safe together with the <strong>Password</strong> you set, and then click “<strong>I’ve Saved It</strong>”.
+    <ul>
       <li><em>You can also go to the <strong>Settings</strong> tab to find your <strong>UUID</strong></em></li>
-      </ul>
-      </li>
-      <li>Go to the empty <strong>Accounts</strong> tab and click on "<strong>Add Stremio Account</strong>".</li>
-      <li>Now you can set a name for the account, and either:
-      <ul>
+    </ul>
+  </li>
+  <li>Go to the empty <strong>Accounts</strong> tab and click on “<strong>Add Stremio Account</strong>”.</li>
+  <li>Now you can set a name for the account, and either:
+    <ul>
       <li>sign in with your Stremio account by using your <strong>Email</strong> and <strong>Password</strong> (easiest &amp; recommended),</li>
       <li>connecting directly with Stremio through <strong>OAuth</strong>, or</li>
       <li>entering the <strong>Auth Key</strong> yourself (instructions are shown, or you can get it as described on the <strong>Cinebye</strong> page in this guide).</li>
-      </ul>
-      </li>
-      <li>Click "<strong>Add Account</strong>" and the account will show up on the <strong>Accounts</strong> tab.
-      <ul>
+    </ul>
+  </li>
+  <li>Click “<strong>Add Account</strong>” and the account will show up on the <strong>Accounts</strong> tab.
+    <ul>
       <li><em>You can repeat this step for all accounts you may want to manage here, if you have more than one, e.g. for all your family.</em></li>
-      </ul>
-      </li>
-      <li>Click on the account that you added.
-      <ul>
+    </ul>
+  </li>
+  <li>Click on the account that you added.
+    <ul>
       <li><em>You will see the <strong>Cinemeta</strong> and maybe also the <strong>Local Files</strong> addons. If you followed this guide, they will also be ordered just like you ordered them with <strong>Cinebye</strong>.</em></li>
-      </ul>
-      </li>
-      </ol>
-      <p><img src="..\assets\images\9.1.png" alt="Create Account"></p>
-      <h2 id="addon-management">Addon Management </h2>
-      <p>AIOManager has a lot of options to manage addons: install, configure, order, remove, copy, update, and more. I'm not going to describe everything here because it would be too much, but feel free to explore the options:</p>
-      <ul>
-      <li><em><strong>Note</strong>: Everything you do on AIOManager is saved immediately &amp; automatically, so you don't need to take any additional steps for saving.</em></li>
-      <li><strong>Refresh</strong>: Refresh the installed addons and their metadata.</li>
-      <li><strong>Reorder</strong>: Change the order of the addons (<em>just like with Cinebye</em>).</li>
-      <li><strong>Library</strong>: Install addons saved in the the personal addons library (** Addons** tab).</li>
-      <li><strong>Bulk Actions</strong>:
-      <ul>
+    </ul>
+  </li>
+</ol>
+
+<p><img src="/assets/images/9.1.png" alt="Create Account" /></p>
+
+<h2 id="addon-management">Addon Management</h2>
+
+<p>AIOManager has a lot of options to manage addons: install, configure, order, remove, copy, update, and more. I’m not going to describe everything here because it would be too much, but feel free to explore the options:</p>
+<ul>
+  <li><em><strong>Note</strong>: Everything you do on AIOManager is saved immediately &amp; automatically, so you don’t need to take any additional steps for saving.</em></li>
+  <li><strong>Refresh</strong>: Refresh the installed addons and their metadata.</li>
+  <li><strong>Reorder</strong>: Change the order of the addons (<em>just like with Cinebye</em>).</li>
+  <li><strong>Library</strong>: Install addons saved in the the personal addons library (** Addons** tab).</li>
+  <li><strong>Bulk Actions</strong>:
+    <ul>
       <li><strong>Force Reinstall All</strong>: Refresh the addon installations (<em>good when making changes to AIOMetadata catalogs, just like refreshing with Cinebye</em>).</li>
       <li><strong>Save All to Library</strong>: Save addons in the personal addons library (<strong>Saved Addons</strong> tab) so that you can reuse them in another account or keep them for later.</li>
       <li><strong>Protect/Unprotect All</strong>: Lock or unlock all addons from being deleted inadvertently.</li>
       <li><strong>Enable/Disable All</strong>: Enable or disable all addons in your Stremio account.</li>
-      </ul>
-      </li>
-      <li><strong>Install</strong>: Install a new addon in the account through the manifest URL.</li>
-      <li>For each addon, you can press:
-      <ul>
-      <li><strong>Configure</strong> to go to the addon's own configuration page.</li>
+    </ul>
+  </li>
+  <li><strong>Install</strong>: Install a new addon in the account through the manifest URL.</li>
+  <li>For each addon, you can press:
+    <ul>
+      <li><strong>Configure</strong> to go to the addon’s own configuration page.</li>
       <li><strong>Catalogs</strong> to reorder and rename the catalogs provided by the addon (if available).</li>
       <li><strong>Customize</strong> to set a different name for it, which is also how it will show on Stremio.</li>
       <li><strong>Reinstall</strong> to refresh the installation if needed.</li>
       <li><strong>Remove</strong> to uninstall the addon.</li>
       <li><strong>Enable/Disable</strong> the addon through the toggle (which will actually install/remove it on the Stremio account every time you toggle).</li>
       <li><strong>Three Dots Menu</strong>:
-      <ul>
-      <li><strong>Protect/Unprotect</strong> the addon from being deleted inadvertently.</li>
-      <li><strong>Clone</strong> to copy the addon into another account.</li>
-      <li><strong>Deploy to all</strong> to copy the addon into all other accounts directly.</li>
-      </ul>
+        <ul>
+          <li><strong>Protect/Unprotect</strong> the addon from being deleted inadvertently.</li>
+          <li><strong>Clone</strong> to copy the addon into another account.</li>
+          <li><strong>Deploy to all</strong> to copy the addon into all other accounts directly.</li>
+        </ul>
       </li>
-      </ul>
-      </li>
-      <li>While inside an account, if you click on "<strong>Select</strong>" and select one or more addons, you will also see options for them, including a <strong>Save</strong> option to save them to the library.</li>
-      <li>If you go back to the <strong>Accounts</strong> tab where you see your Stremio accounts, you can click "<strong>Select</strong>", select an account, and then click on "<strong>Bulk Actions</strong>".
-      <ul>
+    </ul>
+  </li>
+  <li>While inside an account, if you click on “<strong>Select</strong>” and select one or more addons, you will also see options for them, including a <strong>Save</strong> option to save them to the library.</li>
+  <li>If you go back to the <strong>Accounts</strong> tab where you see your Stremio accounts, you can click “<strong>Select</strong>”, select an account, and then click on “<strong>Bulk Actions</strong>”.
+    <ul>
       <li>Here you will see many options that you can do between accounts, including <strong>Mirror from Account</strong>, which can copy the entire account setup (addons and order) into another account.</li>
-      </ul>
-      </li>
-      </ul>
-      <p>Here's a screenshot of how an account with installed addons looks like (<em>see Autopilot below for the double addons</em>):</p>
-      <p><img src="..\assets\images\9.2.png" alt="Addon Management"></p>
-      <ul>
-      <li>The <strong>Saved Addons</strong> tab contains your personal addon library.
-      <ul>
+    </ul>
+  </li>
+</ul>
+
+<p>Here’s a screenshot of how an account with installed addons looks like (<em>see Autopilot below for the double addons</em>):</p>
+
+<p><img src="/assets/images/9.2.png" alt="Addon Management" /></p>
+
+<ul>
+  <li>The <strong>Saved Addons</strong> tab contains your personal addon library.
+    <ul>
       <li>Here you can add the URLs of any addon manifest/configuration you want and keep it stored regardless of a Stremio account.</li>
       <li>You can use <em>Profiles</em> and <em>Tags</em> to organize them, which makes it easier to install or remove them from accounts in bulk.</li>
-      <li><strong>Tip</strong>: Click <strong>Edit</strong> from the three dots on the right of an addon you added here, and enable "<strong>Keep in sync with installed versions</strong>" to keep the addon synced everywhere, for example to update automatically if you change the name or the manifest URL.</li>
-      </ul>
-      </li>
-      <li>The <strong>Activity</strong> and <strong>Metrics</strong> tabs show the watch activity and some fun analytics of the accounts you have added.</li>
-      <li>The <strong>Replay</strong> tab is a very cool feature inspired by Apple Music Replay / Spotify Wrapped, where you can see a lot of visually beautiful statistics and exciting information about the watching behavior of all your accounts. You can have an aggregated view for all accounts, or select which account and/or which year or month you want to view. If you scroll to the bottom, you can also get a <em>shareable link</em> so others can view directly without an AIOManager account.</li>
-      </ul>
-      <h2 id="autopilot-automatic-failover">Autopilot (Automatic Failover) </h2>
-      <p>Getting to the most interesting feature, the <strong>Autopilot</strong> is an exciting capability that allows you to set a <em>fallback instance</em> that automatically takes over if your <em>primary addon goes offline or stops responding</em>. Instead of manually troubleshooting when something breaks, <strong>AIOManager</strong> quietly <em>switches to the backup in the background</em>, keeping your <em>streams and catalogs working without interruption</em>. This reduces <em>downtime</em>, removes <em>single points of failure</em>, and gives you a far more <em>resilient and self-healing setup</em>, especially valuable if you rely on multiple scrapers and public/self-hosted instances that may occasionally go down. If you don't know what addon instances are and how they work, go to <a href="0-Beginner-Concepts.md#what-does-an-addon-instance-mean"><strong>🔰 Beginner Concepts</strong></a>.</p>
-      <p>The best use of this feature would be for the <strong>AIOStreams</strong> and <strong>AIOMetadata</strong> instances, but you can use it for any addon you want, assuming there are alternative instances available for them. And with that said, here's how to set it up:</p>
-      <ol>
-      <li>
-      <p>You start by creating a copy of the configuration for your addon, <strong>BUT</strong> on another instance, and get the manifest URL for it.</p>
-      <ul>
+      <li><strong>Tip</strong>: Click <strong>Edit</strong> from the three dots on the right of an addon you added here, and enable “<strong>Keep in sync with installed versions</strong>” to keep the addon synced everywhere, for example to update automatically if you change the name or the manifest URL.</li>
+    </ul>
+  </li>
+  <li>The <strong>Activity</strong> and <strong>Metrics</strong> tabs show the watch activity and some fun analytics of the accounts you have added.</li>
+  <li>The <strong>Replay</strong> tab is a very cool feature inspired by Apple Music Replay / Spotify Wrapped, where you can see a lot of visually beautiful statistics and exciting information about the watching behavior of all your accounts. You can have an aggregated view for all accounts, or select which account and/or which year or month you want to view. If you scroll to the bottom, you can also get a <em>shareable link</em> so others can view directly without an AIOManager account.</li>
+</ul>
+
+<h2 id="autopilot-automatic-failover">Autopilot (Automatic Failover)</h2>
+
+<p>Getting to the most interesting feature, the <strong>Autopilot</strong> is an exciting capability that allows you to set a <em>fallback instance</em> that automatically takes over if your <em>primary addon goes offline or stops responding</em>. Instead of manually troubleshooting when something breaks, <strong>AIOManager</strong> quietly <em>switches to the backup in the background</em>, keeping your <em>streams and catalogs working without interruption</em>. This reduces <em>downtime</em>, removes <em>single points of failure</em>, and gives you a far more <em>resilient and self-healing setup</em>, especially valuable if you rely on multiple scrapers and public/self-hosted instances that may occasionally go down. If you don’t know what addon instances are and how they work, go to <a href="/0-Beginner-Concepts.html#what-does-an-addon-instance-mean"><strong>🔰 Beginner Concepts</strong></a>.</p>
+
+<p>The best use of this feature would be for the <strong>AIOStreams</strong> and <strong>AIOMetadata</strong> instances, but you can use it for any addon you want, assuming there are alternative instances available for them. And with that said, here’s how to set it up:</p>
+
+<ol>
+  <li>You start by creating a copy of the configuration for your addon, <strong>BUT</strong> on another instance, and get the manifest URL for it.
+    <ul>
       <li><em>For <strong>AIOStreams</strong> and <strong>AIOMetadata</strong> public instances, see <a href="https://status.stremio-status.com/"><strong>this</strong></a> or <a href="https://status.dinsden.top/status/stremio-addons"><strong>this</strong></a></em>.</li>
-      <li><em>For <strong>AIOStreams</strong>/<strong>AIOMetadata</strong>, you can create a copy of your same configuration on another instance by signing in to your current configuration with your <strong>UUID</strong> and <strong>Password</strong>, going to <strong>Save &amp; Install</strong>/<strong>Configuration</strong> respectively, and exporting the configuration <strong>INCLUDING</strong> credentials. Then you go to the new instance for each, go to <strong>Save &amp; Install</strong>/<strong>Configuration</strong> respectively again, and <strong>Import Configuration</strong>. Don't forget to <strong>Save</strong> the new configuration on the new instance, and store the new <strong>UUID</strong> and <strong>Password</strong> for this backup you just created.</em></li>
+      <li><em>For <strong>AIOStreams</strong>/<strong>AIOMetadata</strong>, you can create a copy of your same configuration on another instance by signing in to your current configuration with your <strong>UUID</strong> and <strong>Password</strong>, going to <strong>Save &amp; Install</strong>/<strong>Configuration</strong> respectively, and exporting the configuration <strong>INCLUDING</strong> credentials. Then you go to the new instance for each, go to <strong>Save &amp; Install</strong>/<strong>Configuration</strong> respectively again, and <strong>Import Configuration</strong>. Don’t forget to <strong>Save</strong> the new configuration on the new instance, and store the new <strong>UUID</strong> and <strong>Password</strong> for this backup you just created.</em></li>
       <li><em>For <strong>AIOMetadata</strong>, everything including the API keys will be imported, but the <strong>Trakt</strong> and <strong>Simkl</strong> integration (if you used them) will need to be repeated on the <strong>Catalogs</strong> tab.</em></li>
-      <li><em>In the end you will have one initial/original addon, which we will call "main", and a secondary same addon but on a different instance, which we will call "backup".</em></li>
-      </ul>
-      </li>
-      <li>
-      <p>Back to <strong>AIOManager</strong>, in the <strong>Accounts</strong> tab, you enter the account you want, and click on "<strong>+ Install</strong>".</p>
-      </li>
-      <li>
-      <p>Paste the <em>Addon URL</em> and click "<strong>Install Addon</strong>".</p>
-      <ul>
-      <li><em>This assumes you have already installed the initial main addon. If you haven't installed the first addon yet, then repeat this step twice with the manifest URLs for each.</em></li>
-      </ul>
-      </li>
-      <li>
-      <p>Click on "<strong>Reorder</strong>".</p>
-      </li>
-      <li>
-      <p>Order the <em>backup</em> addon right below the <em>main</em> addon and click "<strong>Save</strong>".</p>
-      <ul>
+      <li><em>In the end you will have one initial/original addon, which we will call “main”, and a secondary same addon but on a different instance, which we will call “backup”.</em></li>
+    </ul>
+  </li>
+  <li>Back to <strong>AIOManager</strong>, in the <strong>Accounts</strong> tab, you enter the account you want, and click on “<strong>+ Install</strong>”.</li>
+  <li>Paste the <em>Addon URL</em> and click “<strong>Install Addon</strong>”.
+    <ul>
+      <li><em>This assumes you have already installed the initial main addon. If you haven’t installed the first addon yet, then repeat this step twice with the manifest URLs for each.</em></li>
+    </ul>
+  </li>
+  <li>Click on “<strong>Reorder</strong>”.</li>
+  <li>Order the <em>backup</em> addon right below the <em>main</em> addon and click “<strong>Save</strong>”.
+    <ul>
       <li><em>The main and backup addon always need to be in pairs in the order, always next to each other, no other addons in-between.</em></li>
-      </ul>
-      </li>
-      <li>
-      <p>Disable the <em>backup</em> addon through the toggle near the title.</p>
-      <p><img src="..\assets\images\9.3.png" alt="Order Addons"></p>
-      </li>
-      <li>
-      <p>Go to "<strong>Failover Rules</strong>" (<em>below the name of the opened account</em>), then "<strong>Autopilot Rules</strong>", then click on "<strong>+ New Rule</strong>".</p>
-      </li>
-      <li>
-      <p>In the "<strong>Create New Autopilot Rule</strong>" page, select the <em>main</em> addon on the first dropdown marked "<strong>Tier 1</strong>" and the <em>backup</em> addon on the second dropdown marked "<strong>Tier 2</strong>".</p>
-      <ul>
+    </ul>
+  </li>
+  <li>
+    <p>Disable the <em>backup</em> addon through the toggle near the title.</p>
+
+    <p><img src="/assets/images/9.3.png" alt="Order Addons" /></p>
+  </li>
+  <li>Go to “<strong>Failover Rules</strong>” (<em>below the name of the opened account</em>), then “<strong>Autopilot Rules</strong>”, then click on “<strong>+ New Rule</strong>”.</li>
+  <li>In the “<strong>Create New Autopilot Rule</strong>” page, select the <em>main</em> addon on the first dropdown marked “<strong>Tier 1</strong>” and the <em>backup</em> addon on the second dropdown marked “<strong>Tier 2</strong>”.
+    <ul>
       <li><em>To tell them apart if the addons have the same name, remember the order you set them earlier, they will show in that order here.</em></li>
-      </ul>
-      </li>
-      <li>
-      <p>Click "<strong>Enable Autopilot</strong>".</p>
-      </li>
-      <li>
-      <p>The rule will be stored and shown further down. Make sure it shows as <strong>Enabled</strong> on the toggle.</p>
-      </li>
-      </ol>
-      <ul>
-      <li><em>You can delete the rule you created if you don't want it anymore later by pressing the trash can button.</em></li>
-      </ul>
-      <p><img src="..\assets\images\9.4.png" alt="Autopilot"></p>
-      <p>That's it! Now you have a robust Stremio setup with backup addons that automatically take over in case the primaries fail, ensuring a continuous stable and smooth experience. <strong>Enjoy!</strong></p>
+    </ul>
+  </li>
+  <li>Click “<strong>Enable Autopilot</strong>”.</li>
+  <li>The rule will be stored and shown further down. Make sure it shows as <strong>Enabled</strong> on the toggle.
+    <ul>
+      <li><em>You can delete the rule you created if you don’t want it anymore later by pressing the trash can button.</em></li>
+    </ul>
+  </li>
+</ol>
+
+<p><img src="/assets/images/9.4.png" alt="Autopilot" /></p>
+
+<p>That’s it! Now you have a robust Stremio setup with backup addons that automatically take over in case the primaries fail, ensuring a continuous stable and smooth experience. <strong>Enjoy!</strong></p>
+
+
+        <section class="quick-nav" id="quick-nav" hidden>
+          <details id="quick-nav-details">
+            <summary>Quick Navigation</summary>
+            <ul id="quick-nav-list"></ul>
+          </details>
+        </section>
+        <nav class="pager" id="pager" aria-label="Page navigation" hidden></nav>
+      </article>
     </main>
-  </body>
+  </div>
+
+  <script src="/assets/js/navigation.js"></script>
+  <script src="/assets/js/checklist.js"></script>
+  <script src="/assets/js/image-toggle.js"></script>
+</body>
 </html>
