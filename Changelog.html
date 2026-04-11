@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>📜 Changelog | Stremio Perfect Setup Collector's Edition</title>
+  <meta name="description" content="Full and Easy Total Beginner's Guide">
+  <link rel="icon" href="/assets/images/sps-logo.svg" type="image/svg+xml">
+  <link rel="shortcut icon" href="/assets/images/sps-logo.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/images/sps-logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script src="/assets/js/theme.js"></script>
+
+</head>
+<body>
+  <header class="topbar">
+    <button class="icon-btn" id="nav-toggle" aria-label="Open navigation" aria-controls="sidebar" aria-expanded="false">☰</button>
+    <a class="topbar-brand" href="/index.html">
+      <img src="/assets/images/sps-logo.svg" alt="Stremio logo" class="topbar-logo">
+      <span class="topbar-brand-text">
+        <span class="topbar-title">Stremio Perfect Setup Collector's Edition</span>
+        <span class="topbar-subtitle">Full and Easy Total Beginner's Guide</span>
+      </span>
+    </a>
+    <button class="icon-btn" id="theme-toggle" aria-label="Toggle theme" aria-pressed="false">◐</button>
+  </header>
+
+  <button class="nav-backdrop" id="nav-backdrop" aria-hidden="true"></button>
+
+  <aside class="sidebar" id="sidebar" aria-label="Guide navigation">
+    <div class="sidebar__inner">
+      <nav id="sidebar-nav"></nav>
+    </div>
+  </aside>
+
+  <div class="layout">
+    <main id="main-content" class="content">
+      <article class="doc-card fade-in">
+        <h1 id="changelog">📜 Changelog </h1>
+
+<h2 id="203-2026-04-06">2.0.3 (2026-04-06)</h2>
+
+<ul>
+  <li>Added <strong>HD Hub</strong> addon for additional HTTP streams.</li>
+  <li>Added automatic exclusion of <strong>P2P</strong> stream type if Debrid or only HTTP selected.</li>
+  <li>Disabled <strong>Statistics</strong> which were apparently active automatically if not set.</li>
+  <li>[AIOMetadata] Enabled <strong>Hide Watched Trakt/MDBList</strong> option to avoid showing already watched content on lists.</li>
+</ul>
+
+<h2 id="202-2026-04-06">2.0.2 (2026-04-06)</h2>
+
+<ul>
+  <li>Enabled <strong>Digital Release</strong> and strict <strong>Matching</strong> filters again to avoid mixed results from others shows to be included.</li>
+</ul>
+
+<h2 id="201-2026-04-03">2.0.1 (2026-04-03)</h2>
+
+<ul>
+  <li>Disabled <strong>Service Wrap</strong> since it may cause some issues with the stream results.</li>
+  <li>Fixed <strong>Colorful Formatter</strong> to show subtitle languages also with flags.</li>
+  <li>Replaced <strong>SubHero</strong> with <strong>OpenSubtitles V3 Pro</strong> because it was down very often.</li>
+</ul>
+
+<h2 id="200-2026-03-31">2.0.0 (2026-03-31)</h2>
+
+<ul>
+  <li><strong>Initial changelog-tracked release.</strong> A lot of changes have been happening since posting the guide for the first time on Reddit, and I never expected it to become so popular. I didn’t even plan on expanding and improving it this far, it just happened. But since I haven’t kept track of everything until now, this is going to be a fresh start. Everyone that used the guide until now, it might be a good idea to re-import the AIOStreams template one more time over your configuration to get the latest changes. If you made modifications after you used the template before, make sure to check and reapply them in case re-importing this template overrides them. Even better, if you totally want to start fresh and make sure there’s no conflicts with your current configuration, import the template on an empty AIOStreams environment and create a new <strong>UUID</strong> and <strong>Password</strong>.</li>
+</ul>
+
+
+        <section class="quick-nav" id="quick-nav" hidden>
+          <details id="quick-nav-details">
+            <summary>Quick Navigation</summary>
+            <ul id="quick-nav-list"></ul>
+          </details>
+        </section>
+        <nav class="pager" id="pager" aria-label="Page navigation" hidden></nav>
+      </article>
+    </main>
+  </div>
+
+  <script src="/assets/js/navigation.js"></script>
+  <script src="/assets/js/checklist.js"></script>
+  <script src="/assets/js/image-toggle.js"></script>
+</body>
+</html>

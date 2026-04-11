@@ -41,22 +41,22 @@
     <main id="main-content" class="content">
       <article class="doc-card fade-in">
         <h1 id="-beginner-concepts">🔰 Beginner Concepts </h1>
-<p>This guide assumes you are aiming for a Stremio setup that is <strong>clean</strong>, <strong>reliable</strong>, and <strong>consistent across devices</strong>. The concepts below explain what each component is doing, why it matters, and why the combination used in this guide tends to work better than a basic "single addon" setup.</p>
+<p>This guide assumes you are aiming for a Stremio setup that is <strong>clean</strong>, <strong>reliable</strong>, and <strong>consistent across devices</strong>. The concepts below explain what each component is doing, why it matters, and why the combination used in this guide tends to work better than a basic “single addon” setup.</p>
 
-<h2 id="what-is-stremio"><strong>What is Stremio?</strong> </h2>
+<h2 id="what-is-stremio"><strong>What is Stremio?</strong></h2>
 <ul>
   <li>Stremio is a media center that unifies <strong>discovery</strong> and <strong>playback</strong> under one interface. You search for a title once, and Stremio can show you the title page (metadata, seasons, episodes) and the available sources (streams) through addons.</li>
-  <li>The important part is that Stremio is not "<em>the content source</em>". Stremio is the <strong>client</strong>. The actual catalogs, metadata, and streams come from the addons you install.</li>
+  <li>The important part is that Stremio is not “<em>the content source</em>”. Stremio is the <strong>client</strong>. The actual catalogs, metadata, and streams come from the addons you install.</li>
   <li>Stremio is also <strong>account-based</strong>. Once you configure your setup and then log in on another device, your <strong>addons and library state</strong> are available there too. That is why you typically build the setup once and reuse it everywhere.</li>
 </ul>
 
-<h2 id="what-platforms-does-stremio-support"><strong>What platforms does Stremio support?</strong> </h2>
+<h2 id="what-platforms-does-stremio-support"><strong>What platforms does Stremio support?</strong></h2>
 <ul>
-  <li>Windows, macOS, Linux, Android (phones/tablets), Android TV and TV boxes, Web (Stremio Web), and iPhone/iPad (currently via sideloading since it's not on the App Store anymore).</li>
-  <li>The key point is not just availability. It is that your Stremio account acts as the "anchor" so your setup is portable across devices.</li>
+  <li>Windows, macOS, Linux, Android (phones/tablets), Android TV and TV boxes, Web (Stremio Web), and iPhone/iPad (currently via sideloading since it’s not on the App Store anymore).</li>
+  <li>The key point is not just availability. It is that your Stremio account acts as the “anchor” so your setup is portable across devices.</li>
 </ul>
 
-<h2 id="how-does-stremio-work-conceptually"><strong>How does Stremio work, conceptually?</strong> </h2>
+<h2 id="how-does-stremio-work-conceptually"><strong>How does Stremio work, conceptually?</strong></h2>
 <ul>
   <li>Stremio has three practical layers:
     <ul>
@@ -68,19 +68,19 @@
   <li>The interface is Stremio. The metadata and streams are mostly defined by the addons you choose (e.g. Cinemeta is integrated from the start and is for providing metadata). That is why two people using Stremio can have completely different experiences.</li>
 </ul>
 
-<h2 id="what-does-synced-everywhere-mean-in-stremio"><strong>What does "synced everywhere" mean in Stremio?</strong> </h2>
+<h2 id="what-does-synced-everywhere-mean-in-stremio"><strong>What does “synced everywhere” mean in Stremio?</strong></h2>
 <ul>
   <li>Your Stremio account stores your core setup and usage state. When you sign in on another device, you generally inherit:
-  <ul>
-    <li><strong>Installed addons</strong></li>
-    <li><strong>Library and watchlist</strong></li>
-    <li><strong>Continue watching / progress inside Stremio</strong></li>
-  </ul>
+    <ul>
+      <li><strong>Installed addons</strong></li>
+      <li><strong>Library and watchlist</strong></li>
+      <li><strong>Continue watching / progress inside Stremio</strong></li>
+    </ul>
   </li>
-  <li>However, "synced" does not guarantee identical playback behavior. Device/platform constraints can matter, especially for torrent playback on some platforms.</li>
+  <li>However, “synced” does not guarantee identical playback behavior. Device/platform constraints can matter, especially for torrent playback on some platforms.</li>
 </ul>
 
-<h2 id="what-is-the-addon-ecosystem-what-do-addons-actually-provide"><strong>What is the addon ecosystem? What do addons actually provide?</strong> </h2>
+<h2 id="what-is-the-addon-ecosystem-what-do-addons-actually-provide"><strong>What is the addon ecosystem? What do addons actually provide?</strong></h2>
 <ul>
   <li>Addons are the extension mechanism. They can provide one or more of:
     <ul>
@@ -92,7 +92,7 @@
   <li>A basic setup often mixes these responsibilities without control. A strong setup separates concerns: you use dedicated addons for metadata/catalogs, and dedicated addons for stream aggregation and quality control.</li>
 </ul>
 
-<h2 id="what-does-an-addon-instance-mean"><strong>What does "an addon instance" mean?</strong> </h2>
+<h2 id="what-does-an-addon-instance-mean"><strong>What does “an addon instance” mean?</strong></h2>
 <ul>
   <li>An addon is the software. An <strong>instance</strong> is a specific hosted deployment of that addon that Stremio communicates with.</li>
   <li>When you install an addon, you are effectively registering its <strong>instance URL</strong> in your Stremio account. When you browse a title or press play, Stremio queries that instance to retrieve catalogs, metadata, or streams.</li>
@@ -106,14 +106,14 @@
   <li>Important: configuration is not universal across instances. If an addon supports user configuration, that config is tied to the instance and your saved profile there. Switching instances often means reconfiguring or reinstalling via that instance.</li>
 </ul>
 
-<h2 id="which-addon-instance-should-i-choose"><strong>Which addon instance should I choose?</strong> </h2>
+<h2 id="which-addon-instance-should-i-choose"><strong>Which addon instance should I choose?</strong></h2>
 <ul>
   <li>Pick based on reliability first, then performance. If an instance is unstable, your experience will be unstable regardless of how good your configuration is.</li>
   <li>Use <strong><a href="https://status.stremio-status.com/">this</a></strong> or <strong><a href="https://status.dinsden.top/status/stremio-addons">this</a></strong> link to quickly verify outages and pick alternatives if a popular instance is having issues.</li>
-  <li>In this guide, I link solid default instances, but you should treat them as "recommended", not permanent truths.</li>
+  <li>In this guide, I link solid default instances, but you should treat them as “recommended”, not permanent truths.</li>
 </ul>
 
-<h2 id="what-is-torrenting-p2p-and-how-does-stremio-support-it"><strong>What is torrenting (P2P), and how does Stremio support it?</strong> </h2>
+<h2 id="what-is-torrenting-p2p-and-how-does-stremio-support-it"><strong>What is torrenting (P2P), and how does Stremio support it?</strong></h2>
 <ul>
   <li>Torrenting is <strong>peer-to-peer distribution</strong>. A file is shared by a swarm of peers, and your client downloads pieces from multiple peers in parallel.</li>
   <li>In Stremio, torrent-based stream addons can return torrent sources. When you select one, playback depends on the availability and health of that swarm.</li>
@@ -121,40 +121,40 @@
   <li>This is why many setups prioritize cached sources (via Debrid) and treat direct P2P as fallback.</li>
 </ul>
 
-<h2 id="what-is-a-debrid-service-and-why-do-people-use-it-with-stremio"><strong>What is a Debrid service, and why do people use it with Stremio?</strong> </h2>
+<h2 id="what-is-a-debrid-service-and-why-do-people-use-it-with-stremio"><strong>What is a Debrid service, and why do people use it with Stremio?</strong></h2>
 <ul>
   <li>A Debrid service acts as an intermediate layer that can fetch torrents (and often hoster links) on its own infrastructure, then serve the result to you via standard HTTPS streaming.</li>
   <li>The practical benefit is caching. If a file is already cached on the Debrid provider, you get fast start times and stable throughput that is not dependent on swarm health.</li>
-  <li>In other words: instead of you relying on random peers, you rely on the Debrid provider's servers. That usually improves consistency significantly.</li>
+  <li>In other words: instead of you relying on random peers, you rely on the Debrid provider’s servers. That usually improves consistency significantly.</li>
 </ul>
 
-<h2 id="real-debrid-what-is-it-and-why-would-you-pick-it"><strong>Real-Debrid: what is it, and why would you pick it?</strong> </h2>
+<h2 id="real-debrid-what-is-it-and-why-would-you-pick-it"><strong>Real-Debrid: what is it, and why would you pick it?</strong></h2>
 <ul>
-  <li><a href="http://real-debrid.com/?id=8801126"><strong>Real-Debrid</strong></a> is one of the most widely used Debrid services and is known for having a very large <strong>cache</strong> (files already on their servers and ready to watch immediately).</li>
-  <li>That "<em>large cache</em>" part matters because it often means you will find more sources that start instantly without waiting for anything to download first.</li>
+  <li><a href="http://real-debrid.com/?id=12639093"><strong>Real-Debrid</strong></a> is one of the most widely used Debrid services and is known for having a very large <strong>cache</strong> (files already on their servers and ready to watch immediately).</li>
+  <li>That “<em>large cache</em>” part matters because it often means you will find more sources that start instantly without waiting for anything to download first.</li>
   <li>Important limitation: Real-Debrid allows <strong>one connection at a time</strong>. That means you cannot watch simultaneously on two or more devices using the same Real-Debrid key. If you do, you can get warnings and risk a ban if it keeps happening.</li>
   <li>So Real-Debrid is good if you are a <strong>single user</strong> or you know you will not stream in parallel.</li>
 </ul>
 
-<h2 id="torbox-what-is-it-and-why-would-you-pick-it"><strong>TorBox: what is it, and why would you pick it?</strong> </h2>
+<h2 id="torbox-what-is-it-and-why-would-you-pick-it"><strong>TorBox: what is it, and why would you pick it?</strong></h2>
 <ul>
   <li><a href="https://torbox.app/subscription?referral=f7feee59-8c0d-4842-b53a-07738c37f7f1"><strong>TorBox</strong></a> is also a Debrid-style service, but it is very practical for <strong>multiple simultaneous streams</strong>.</li>
   <li>Even the basic paid tier supports <strong>multiple parallel connections</strong> (up to <strong>3</strong> in the Essential tier, and Pro tier up to <strong>10</strong> parallel streams).</li>
   <li>That matters if you want to use the same API key across <strong>family members</strong>, <strong>friends</strong>, or even <strong>multiple Stremio accounts</strong> streaming at the same time.</li>
-  <li><strong>Tradeoff</strong>: TorBox may not always have as large an "immediately cached" library as Real-Debrid. If something is not cached yet, you might see sources that require TorBox to fetch it first. In the stream list this shows up as an <strong>hourglass icon</strong>.</li>
-  <li>That does not mean it will not work. It means it may need time to download the file first, and the speed depends on available <strong>seeders</strong>, though it is often reasonably fast. If there's enough seeders, it's a matter of seconds or minutes.</li>
+  <li><strong>Tradeoff</strong>: TorBox may not always have as large an “immediately cached” library as Real-Debrid. If something is not cached yet, you might see sources that require TorBox to fetch it first. In the stream list this shows up as an <strong>hourglass icon</strong>.</li>
+  <li>That does not mean it will not work. It means it may need time to download the file first, and the speed depends on available <strong>seeders</strong>, though it is often reasonably fast. If there’s enough seeders, it’s a matter of seconds or minutes.</li>
   <li>In most cases, TorBox still has plenty of cached options. You only need one good cached source per title.</li>
-  <li>Make sure to use my referral code when ordering: <em><strong>f7feee59-8c0d-4842-b53a-07738c37f7f1</strong></em> to get 7 additional days for each month you buy (only for the first purchase, so I recommend you go big from the start and buy the yearly, it's a better value and you get 84 additional days for free). You can also buy the cheapest tier for a year initially to get the extra 3 months, and if you need a higher tier, you can upgrade along the way, it is possible. You can enter it when choosing the Plan, scroll down to the bottom and there you'll see it.</li>
+  <li>Make sure to use my referral code when ordering: <strong><em>f7feee59-8c0d-4842-b53a-07738c37f7f1</em></strong> to get 7 additional days for each month you buy (only for the first purchase, so I recommend you go big from the start and buy the yearly, it’s a better value and you get 84 additional days for free). You can also buy the cheapest tier for a year initially to get the extra 3 months, and if you need a higher tier, you can upgrade along the way, it is possible. You can enter it when choosing the Plan, scroll down to the bottom and there you’ll see it.</li>
 </ul>
 
-<h2 id="torbox-vs-real-debrid-how-to-choose-without-overthinking-it"><strong>TorBox vs Real-Debrid: how to choose without overthinking it</strong> </h2>
+<h2 id="torbox-vs-real-debrid-how-to-choose-without-overthinking-it"><strong>TorBox vs Real-Debrid: how to choose without overthinking it</strong></h2>
 <ul>
-  <li>If you are streaming mostly alone and you want the highest chance of "instant play" from a large cache: <strong>Real-Debrid</strong> is often a strong choice.</li>
+  <li>If you are streaming mostly alone and you want the highest chance of “instant play” from a large cache: <strong>Real-Debrid</strong> is often a strong choice.</li>
   <li>If you want the same Debrid key to work safely for <strong>multiple people/screens at the same time</strong>: <strong>TorBox</strong> is usually the more practical and economical choice.</li>
-  <li>Both are inexpensive enough that some people treat them like "coverage tools", not an either-or decision.</li>
+  <li>Both are inexpensive enough that some people treat them like “coverage tools”, not an either-or decision.</li>
 </ul>
 
-<h2 id="why-use-both-torbox-and-real-debrid-together"><strong>Why use both TorBox and Real-Debrid together?</strong> </h2>
+<h2 id="why-use-both-torbox-and-real-debrid-together"><strong>Why use both TorBox and Real-Debrid together?</strong></h2>
 <ul>
   <li>Because they complement each other:
     <ul>
@@ -166,13 +166,25 @@
   <li>Important: if you use Real-Debrid as a backup, remember its <strong>one-connection</strong> rule. Keep it as a fallback, not something multiple people stream from at the same time.</li>
 </ul>
 
-<h2 id="how-do-you-actually-use-both-in-this-setup"><strong>How do you actually use both in this setup?</strong> </h2>
+<h2 id="how-do-you-actually-use-both-in-this-setup"><strong>How do you actually use both in this setup?</strong></h2>
 <ul>
   <li>In <strong>AIOStreams</strong>, you can add <strong>multiple Debrid services</strong> at the same time.</li>
   <li>That means your stream list can include cached results from both providers, increasing the chance that at least one provider has a fast, stable source available right now.</li>
 </ul>
 
-<h2 id="what-is-trakt-and-why-do-people-connect-it-to-stremio"><strong>What is Trakt, and why do people connect it to Stremio?</strong> </h2>
+<h2 id="whats-the-difference-between--debrid--p2p-and--http-streams-and-which-should-i-choose"><strong>What’s the difference between ⚡ DEBRID, 🧲 P2P, and 🌐 HTTP streams, and which should I choose?</strong></h2>
+<ul>
+  <li>You will choose which stream type you prefer during the <em>AIOStreams</em> template import:
+    <ul>
+      <li><strong>⚡ DEBRID</strong> is paid, but fast, safest and most reliable. Activated by selecting a Debrid service when you import the template.</li>
+      <li><strong>🧲 P2P</strong> is free, but slower and risky depending on the laws of your country. Activated automatically if you don’t select a Debrid when you import the template.</li>
+      <li><strong>🌐 HTTP</strong> is free and safe, but slower and less reliable than Debrid. Activated if you enable the <em>HTTP Addons</em> option when you import the template.</li>
+    </ul>
+  </li>
+  <li><em>In case <strong>P2P</strong> is an issue in your country: If you use <strong>Debrid</strong> (paid) or <strong>HTTP</strong> (free) streams, you are generally safe and don’t need a VPN. <strong>Debrid</strong> however is still the safest and most reliable solution.</em></li>
+</ul>
+
+<h2 id="what-is-trakt-and-why-do-people-connect-it-to-stremio"><strong>What is Trakt, and why do people connect it to Stremio?</strong></h2>
 <ul>
   <li>Trakt is a watch-state and history platform. It stores what you watched, where you stopped, and can keep progress consistent across devices and apps.</li>
   <li>In Stremio setups, Trakt is mainly used for:
@@ -184,7 +196,7 @@
   </li>
 </ul>
 
-<h2 id="what-are-scrapers-and-why-do-you-need-multiple"><strong>What are scrapers, and why do you need multiple?</strong> </h2>
+<h2 id="what-are-scrapers-and-why-do-you-need-multiple"><strong>What are scrapers, and why do you need multiple?</strong></h2>
 <ul>
   <li>A scraper is an addon that searches one or more indexes/providers and returns stream candidates for a title.</li>
   <li>No scraper has perfect coverage. They differ by what they index, how they prioritize results, and how reliably they respond.</li>
@@ -195,9 +207,9 @@
       <li><strong>Resilience</strong> (one scraper can be down without killing your results)</li>
     </ul>
   </li>
- </ul>
+</ul>
 
-<h2 id="what-does-aiostreams-do-and-why-is-it-the-center-of-this-setup"><strong>What does AIOStreams do, and why is it the center of this setup?</strong> </h2>
+<h2 id="what-does-aiostreams-do-and-why-is-it-the-center-of-this-setup"><strong>What does AIOStreams do, and why is it the center of this setup?</strong></h2>
 <ul>
   <li>AIOStreams is a stream aggregation and normalization layer. It pulls results from multiple scrapers and presents them as a single, consistent stream list.</li>
   <li>More importantly, it lets you control behavior that basic setups lack:
@@ -210,26 +222,26 @@
   <li>This is how you avoid the classic Stremio problem where the stream list is a noisy mix of inconsistent labels and unreliable ordering.</li>
 </ul>
 
-<h2 id="what-does-aiometadata-do-and-why-include-it"><strong>What does AIOMetadata do, and why include it?</strong> </h2>
+<h2 id="what-does-aiometadata-do-and-why-include-it"><strong>What does AIOMetadata do, and why include it?</strong></h2>
 <ul>
-  <li>AIOMetadata is a metadata and catalog layer that gives you more control over what appears in Stremio's browsing experience.</li>
+  <li>AIOMetadata is a metadata and catalog layer that gives you more control over what appears in Stremio’s browsing experience.</li>
   <li>It can provide alternative metadata sources, richer artwork handling, and additional catalogs (including anime-focused flows depending on configuration).</li>
   <li>In practice: AIOStreams fixes the stream list, AIOMetadata improves the browsing layer and catalog structure.</li>
 </ul>
 
-<h2 id="what-is-cinemeta-and-why-do-people-say-aiometadata-can-replace-it"><strong>What is Cinemeta, and why do people say AIOMetadata can replace it?</strong> </h2>
+<h2 id="what-is-cinemeta-and-why-do-people-say-aiometadata-can-replace-it"><strong>What is Cinemeta, and why do people say AIOMetadata can replace it?</strong></h2>
 <ul>
-  <li>Cinemeta is Stremio's default metadata provider and it cannot be removed.</li>
-  <li>"Replace" in practice means you keep Cinemeta installed, but you rely primarily on AIOMetadata catalogs/metadata for browsing. Cinemeta becomes the fallback, not the main layer.</li>
+  <li>Cinemeta is Stremio’s default metadata provider and it cannot be removed.</li>
+  <li>“Replace” in practice means you keep Cinemeta installed, but you rely primarily on AIOMetadata catalogs/metadata for browsing. Cinemeta becomes the fallback, not the main layer.</li>
 </ul>
 
-<h2 id="what-does-watchly-do-and-why-is-it-good-in-this-setup"><strong>What does Watchly do, and why is it good in this setup?</strong> </h2>
+<h2 id="what-does-watchly-do-and-why-is-it-good-in-this-setup"><strong>What does Watchly do, and why is it good in this setup?</strong></h2>
 <ul>
-  <li>Watchly focuses on recommendations and discovery. It generates catalogs that feel closer to a personalized "what should I watch next" flow.</li>
+  <li>Watchly focuses on recommendations and discovery. It generates catalogs that feel closer to a personalized “what should I watch next” flow.</li>
   <li>It pairs well with AIOMetadata because it adds recommendation-driven catalogs, while AIOMetadata can cover broader metadata/catalog needs. Watchly also uses the metadata provided by AIOMetadata if the setup in this guide is followed, ensuring consistency throughout addons.</li>
 </ul>
 
-<h2 id="what-are-tmdb-tvdb-and-rpdb-and-why-do-they-matter-here"><strong>What are TMDB, TVDB, and RPDB, and why do they matter here?</strong> </h2>
+<h2 id="what-are-tmdb-tvdb-and-rpdb-and-why-do-they-matter-here"><strong>What are TMDB, TVDB, and RPDB, and why do they matter here?</strong></h2>
 <ul>
   <li>These are external data sources that addons commonly use:
     <ul>
@@ -241,16 +253,18 @@
   <li>They matter because correct IDs and high-quality metadata are what make catalogs accurate and browsing consistent. RPDB matters mainly for better looking posters with embedded rating context.</li>
 </ul>
 
-<h2 id="what-is-an-api-key-in-plain-english"><strong>What is an API key, in plain English?</strong> </h2>
+<h2 id="what-is-an-api-key-in-plain-english"><strong>What is an API key, in plain English?</strong></h2>
 <ul>
   <li>An API key is a credential that lets a service identify you and authorize requests. Many metadata and artwork providers require it to prevent abuse and apply usage limits.</li>
 </ul>
 
-<h2 id="what-is-a-gemini-api-key-what-does-it-do-and-why-might-it-appear-in-stremio-related-setups"><strong>What is a Gemini API key, what does it do, and why might it appear in Stremio-related setups?</strong> </h2>
+<h2 id="what-is-a-gemini-api-key-what-does-it-do-and-why-might-it-appear-in-stremio-related-setups"><strong>What is a Gemini API key, what does it do, and why might it appear in Stremio-related setups?</strong></h2>
 <ul>
-  <li>A <strong>Gemini</strong> API key authorizes requests to Google's Gemini models.</li>
+  <li>A <strong>Gemini</strong> API key authorizes requests to Google’s Gemini models.</li>
   <li>In this ecosystem, it is typically relevant when a tool/addon has AI-assisted features (specifically for AI-powered search through AIOMetadata).</li>
 </ul>
+
+
 
         <section class="quick-nav" id="quick-nav" hidden>
           <details id="quick-nav-details">

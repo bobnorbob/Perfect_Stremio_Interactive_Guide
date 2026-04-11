@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>🛠️ Additional Stuff | Stremio Perfect Setup Collector's Edition</title>
+  <title>❓ Configuration Q&amp;A | Stremio Perfect Setup Collector's Edition</title>
   <meta name="description" content="Full and Easy Total Beginner's Guide">
   <link rel="icon" href="/assets/images/sps-logo.svg" type="image/svg+xml">
   <link rel="shortcut icon" href="/assets/images/sps-logo.svg" type="image/svg+xml">
@@ -43,6 +43,20 @@
         <h1 id="-configuration-qa">❓ Configuration Q&amp;A </h1>
 
 <p>I am including this section for anyone who has any additional questions or is encountering any common issues. Most of this is already in the guide, but a lot of you skip them :), so I have extracted them here for you to find answers quickly:</p>
+
+<h2 id="i-would-like-to-share-my-setup-with-my-friends-and-family-is-that-possible"><strong>I would like to share my setup with my friends and family. Is that possible?</strong></h2>
+<ul>
+  <li>It would depend on the approach you chose during the guide, and what “level” of sharing you want to achieve.</li>
+  <li>You can install the same addons with the same configurations (same Manifest URL) onto multiple Stremio accounts. However, keep in mind:
+    <ul>
+      <li>If you used a Debrid, only <em>TorBox</em> allows you to use it with multiple IPs/streams (thus multiple accounts), <em>Real-Debrid</em> allows only one IP. You can proxy the <em>Real-Debrid</em> requests, but that needs self-hosting and it’s beyond the scope of this guide. For <em>TorBox</em>, you can use its API key on multiple configurations as you see fit. Just don’t abuse with it, it’s fair use, if you resell or give it to your entire village, where they notice suspiciously high usage, you will get banned.</li>
+      <li>As such, if you’re using <em>TorBox</em>, or a <em>P2P/HTTP</em> setup, you can share the same <strong>AIOStreams</strong> configuration, meaning you can install the same configuration directly by switching Stremio accounts on <a href="https://web.stremio.com/"><strong>web.stremio.com</strong></a> and installing it on each by pressing <strong>Install</strong> from the <strong>Save &amp; Install</strong> tab on <em>AIOStreams</em>, like you did the first time.</li>
+      <li><strong>AIOMetadata</strong> can also be shared, thus you can also install the same configuration directly by switching Stremio accounts on <a href="https://web.stremio.com/"><strong>web.stremio.com</strong></a> and installing it on each by pressing <strong>Install</strong> from the <strong>Configuration</strong> tab on <em>AIOMetadata</em>, like you did the first time. However, if you integrated your Trakt or Simkl account on <em>AIOMetadata</em>, keep in mind that these accounts will also be included. If you don’t care about this, or you didn’t integrate Trakt on <em>AIOMetadata</em>, then it’s not a problem. This is separate from the <strong>Trakt Scrobbling</strong> you enabled directly on your Stremio account, which you should also do with separate Trakt accounts for each Stremio account, if you enable it at all.</li>
+      <li><strong>Watchly</strong> is account-specific, because it binds directly to your Stremio account, so this addon you need to configure separately for each Stremio account. It will create catalogs based on your watch history, so it wouldn’t make sense to do that based on the watch history of another account.</li>
+      <li>The <em>TMDB, TVDB, RPDB, Gemini</em> API keys can be shared, which allows <em>AIOStreams</em> and <em>AIOMetadata</em> to be shared as described in the first place.</li>
+    </ul>
+  </li>
+</ul>
 
 <h2 id="i-installed-or-removed-addons-but-nothing-changes-in-stremio-am-i-in-the-wrong-place"><strong>I installed or removed addons, but nothing changes in Stremio. Am I in the wrong place?</strong></h2>
 <ul>
@@ -156,15 +170,16 @@
 
 <p><img src="/assets/images/3.9.3.png" alt="Sorting Language" /></p>
 
-<h2 id="i-am-not-happy-with-non-english-results-it-feels-like-good-results-are-being-filtered-out"><strong>I am not happy with non-English results. It feels like good results are being filtered out.</strong></h2>
+<h2 id="i-am-not-happy-with-the-results-especially-non-english-is-that-all-or-could-some-have-been-filtered-out"><strong>I am not happy with the results, especially non-English. Is that all or could some have been filtered out?</strong></h2>
 <ul>
-  <li>In <strong>AIOStreams</strong>: go to <strong>Filters → Matching</strong> and disable matching by turning off the <strong>Enable</strong> toggle in all three sections:
+  <li>Depending on the filenames of the streams, especially non-English results that don’t follow the standard naming, could be more difficult to be parsed. The <strong>Matching</strong> option in <strong>AIOStreams</strong> helps to avoid any streams from the wrong show to be shown, using this filename information. You can try to disable it however to see if it helps. Go to <strong>Filters → Matching</strong> and disable it by turning off the <strong>Enable</strong> toggle in all three sections:
     <ul>
       <li><em>Title Matching</em></li>
       <li><em>Year Matching</em></li>
       <li><em>Season/Episode Matching</em></li>
     </ul>
   </li>
+  <li>Before disabling it entirely, you can try first to simply disable the <strong>Strict</strong> toggles and check, otherwise disable it entirely. Keep in mind however that sometimes wrong results might be shown.</li>
 </ul>
 
 <p><img src="/assets/images/3.12.2.png" alt="Disable Matching" /></p>
@@ -185,6 +200,15 @@
 </ul>
 
 <p><img src="/assets/images/3.12.1.png" alt="Change Fetching" /></p>
+
+<h2 id="there-are-some-numbers-being-shown-on-the-streams-list-instead-of-the-usual-details-and-i-am-being-redirected-to-github-when-i-click-them"><strong>There are some numbers being shown on the streams list instead of the usual details, and I am being redirected to GitHub when I click them.</strong></h2>
+<ul>
+  <li>If you see something like the picture below, they are statistics showing information about the results returned from the scrapers, including what was filtered out, what was included, time it took for each, and more.</li>
+  <li>They are shown only when the scrapers did not return any results, or when irrelevant, low quality, or bad results in general have been filtered out already, leaving no results available. This way you can try to figure out why there are no results.</li>
+  <li>They are only informational, but they are clickable because they have to be for Stremio to show them. However DO NOT click them because you will be taken to the <em>AIOStreams</em> GitHub page, which is unnecessary.</li>
+</ul>
+
+<p><img src="/assets/images/3.12.0.png" alt="Show Statistics" /></p>
 
 <h2 id="i-cannot-save-because-it-says-knabenseadexanimetosho-requires-a-debrid-service"><strong>I cannot save because it says “Knaben/SeaDex/AnimeTosho requires a Debrid service…”.</strong></h2>
 <ul>

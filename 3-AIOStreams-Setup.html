@@ -43,37 +43,35 @@
         <h1 id="-3-aiostreams-find-streams">📚 3. AIOStreams [Find Streams] </h1>
 
 <p><strong>AIOStreams</strong> is the stream aggregation engine in this setup. It combines multiple scraping sources into one consistent results list, and lets you apply filtering, sorting, and formatting so the best links appear first.</p>
-      
-<p>Select an <strong>AIOStreams</strong> instance from <a href="https://status.stremio-status.com/"><strong>this</strong></a> or <a href="https://status.dinsden.top/status/stremio-addons"><strong>this</strong></a> link (they both show the same instances and their online status, it's just two different sources) and:</p>
-      
+
+<p>Select an <strong>AIOStreams</strong> instance from <a href="https://uptime.ibbylabs.dev/#group-aiostreams"><strong>this</strong></a> or <a href="https://status.dinsden.top/status/stremio-addons"><strong>this</strong></a> link (they both show the same instances and their online status, it’s just two different sources), or go directly to <a href="https://aiostreamsfortheweebsstable.midnightignite.me/"><strong>Midnight’s</strong></a> or <a href="https://aiostreams.fortheweak.cloud/"><strong>Yeb’s/Nhyira</strong></a> instance (two of the most popular ones) and:</p>
+
 <blockquote>
   <p><strong>WARNING:</strong></p>
   <ul>
-    <li><em>If you want to understand more what an instance means, go to</em> <a href="0-Beginner-Concepts.html#what-does-an-addon-instance-mean"><strong>🔰 Beginner Concepts</strong></a>.</li>
-    <li><em><a href="https://aiostreamsfortheweebsstable.midnightignite.me/"><strong>Midnight's</strong></a> or <a href="https://aiostreams.fortheweak.cloud/"><strong>Yeb's/Nhyira</strong></a> are some of the most popular, so you can open these links directly, but almost all are viable options.</em></li>
-    <li><em>You can choose an instance that says <strong>Nightly</strong>, and they work great, but they are instances that update very frequently and thus the steps described in this guide may not be up to date to match them. If you're a total beginner, you're probably better off with an instance that doesn't say <strong>Nightly</strong>.</em></li>
-    <li><em><strong>DON'T</strong> choose the <strong>ElfHosted</strong> instance because Torrentio doesn't work there.</em></li>
-    <li><em>Choose one of the instances and stick with it, you will store your configuration here, and if you change to the other instance, you'll need to transfer your configuration because it's not automatically transferred</em></li>
-    <li><em>You can keep the monitoring links above for later to check the instance online status, if it happens that it's not working and might be temporarily down.</em></li>
+    <li><em>If you want to understand more what an instance means, go to</em> <a href="/0-Beginner-Concepts.html#what-does-an-addon-instance-mean"><strong>🔰 Beginner Concepts</strong></a>.</li>
+    <li><em>You can choose an instance that says <strong>Nightly</strong>, and they work great, but they are instances that update very frequently and thus the steps described in this guide may not be up to date to match them. If you’re a total beginner, you’re probably better off with an instance that doesn’t say <strong>Nightly</strong>.</em></li>
+    <li><em><strong>DON’T</strong> choose the <strong>ElfHosted</strong> instance because Torrentio doesn’t work there.</em></li>
+    <li><em>Choose one of the instances and stick with it, you will store your configuration here, and if you change to the other instance, you’ll need to transfer your configuration because it’s not automatically transferred</em></li>
+    <li><em>You can keep the monitoring links above for later to check the instance online status, if it happens that it’s not working and might be temporarily down.</em></li>
   </ul>
 </blockquote>
 
 <ol>
-  <li>Select "<strong>Advanced</strong>" on the welcome screen if it shows up.</li>
-  <li>Copy <a href="/assets/templates/AIOStreams.json"><strong>this</strong></a> link (right-click and "<em>Copy link address</em>").</li>
+  <li>Select “<strong>Advanced</strong>” on the welcome screen if it shows up.</li>
+  <li>Copy <a href="https://raw.githubusercontent.com/luckynumb3rs/stremio-perfect-setup/refs/heads/main/templates/AIOStreams.json"><strong>this</strong></a> link (right-click and “<em>Copy link address</em>”).</li>
   <li>
-    <p>Go to the "<strong>Save &amp; Install</strong>" tab on AIOStreams (sidebar menu on the left), click "<strong>Import</strong>", "<strong>Import Template</strong>", paste the link you copied and click on "<strong>Go</strong>".</p>
+    <p>Go to the “<strong>Save &amp; Install</strong>” tab on AIOStreams (sidebar menu on the left), click “<strong>Import</strong>”, “<strong>Import Template</strong>”, paste the link you copied and click on “<strong>Go</strong>”.</p>
 
-    <p><img src="..\assets\images\3.3.png" alt="Import Template"></p>
+    <p><img src="/assets/images/3.3.png" alt="Import Template" /></p>
   </li>
   <li>
-    <p>Click "<strong>Use this Template Now</strong>".</p>
-      
-    <p><img src="..\assets\images\3.4.png" alt="Use Template"></p>
+    <p>Click “<strong>Use this Template Now</strong>”.</p>
+
+    <p><img src="/assets/images/3.4.png" alt="Use Template" /></p>
   </li>
   <li>
-    <p>On the "<strong>Select Services</strong>" page that is shown, enable the services you want to use and click "<strong>Next</strong>". If you're not using any services and want to proceed with the <strong>P2P/HTTP</strong> setup, click "<strong>Skip</strong>".</p>
-      
+    <p>On the “<strong>Select Services</strong>” page that is shown, enable the services you want to use and click “<strong>Next</strong>”. If you’re not using any services and want to proceed with the <strong>P2P/HTTP</strong> setup, click “<strong>Skip</strong>”.</p>
 
     <p><img src="/assets/images/3.5.png" alt="Select Services" /></p>
   </li>
@@ -174,6 +172,8 @@
   <p><strong>NOTES FOR LATER:</strong></p>
   <ul>
     <li><em>If you use a Debrid service, and are in a country where you can’t torrent, be careful to not open any links with the 🧲 icon. They should normally never appear if you have a Debrid configured, but just making sure you know.</em></li>
+    <li><em>If there are no streams for a show, you will see statistics instead (looking like below), so that you can find out why. Do not click them, they are only informational and will take you to GitHub if you do.</em>
+<img src="/assets/images/3.12.0.png" alt="Show Statistics" /></li>
     <li><em>If you see that you are getting results too slowly, try changing the fetching strategy. Go to <strong>Addons</strong>, scroll down to <strong>Addon Fetching Strategy</strong>. and select <strong>Dynamic</strong>. There should already be an exit condition pre-filled, which you can leave as is, and save the configuration. However, keep in mind that this might leave out relevant results, so try it yourself. On the other hand, if you feel you’re not getting enough good results, do the opposite and select <strong>Default</strong> instead.</em>
 <img src="/assets/images/3.12.1.png" alt="Change Fetching" /></li>
     <li><em>If you prefer results for a language other than English, and you are not happy with the results you’re getting, try disabling matching. Go to <strong>Filters</strong>, then <strong>Matching</strong>, and switch off the <strong>Enable</strong> toggle in all three sections (Title Matching, Year Matching, Season/Episode Matching).</em>

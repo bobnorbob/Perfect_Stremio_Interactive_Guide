@@ -5,13 +5,6 @@
 │   │   ├── style.css
 │   │   ├── utilities.css
 │   │   └── variables.css
-│   ├── js
-│   │   ├── navigation.js
-│   │   ├── theme.js
-│   │   ├── markdown.js
-│   │   ├── marked.min.js
-│   │   ├── checklist.js
-│   │   ├── image-toggle.js
 │   ├── images
 │   │   ├── 
 │   │   ├── 1.2.1.png
@@ -58,22 +51,28 @@
 │   │   ├── 9.3.png
 │   │   ├── 9.4.png
 │   │   ├── home.jpg
-│   └── └── U.1.png
-├── guide
-│   ├── 0-Beginner-Concepts.md
-│   ├── 1-Accounts-Preparation.md
-│   ├── 2-Stremio-Initialization.md
-│   ├── 3-AIOStreams-Setup.md
-│   ├── 4-AIOMetadata-Setup.md
-│   ├── 5-Cinebye-Cleanup.md
-│   ├── 6-Personalized-Lists.md
-│   ├── 7-Additional-Stuff.md
-│   ├── 8-Configuration-QA.md
-│   ├── AIOManager-Setup.md
-│   ├── index.md
-│   └── Updates.md
-templates
-├── AIOMetadata.json
-├── AIOStreams.json
-└── AIOStreams-Formatter.json
+│   │   ├── U.1.png
+│   ├── js
+│   │   ├── navigation.js
+│   │   ├── theme.js
+│   │   ├── markdown.js
+│   │   ├── marked.min.js
+│   │   ├── checklist.js
+│   │   ├──  image-toggle.js
+│   ├── templates
+│   │   ├── AIOMetadata.json
+│   │   ├── AIOStreams.json
+│   └── └── AIOStreams-Formatter.json
+0-Beginner-Concepts.md
+1-Accounts-Preparation.md
+2-Stremio-Initialization.md
+3-AIOStreams-Setup.md
+4-AIOMetadata-Setup.md
+5-Cinebye-Cleanup.md
+6-Personalized-Lists.md
+7-Additional-Stuff.md
+8-Configuration-QA.md
+AIOManager-Setup.md
+index.md
+Updates.md
 index.html

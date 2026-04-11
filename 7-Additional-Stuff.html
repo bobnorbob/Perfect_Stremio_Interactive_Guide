@@ -144,6 +144,8 @@ Prioritize streams that are ⚡ <strong>cached</strong>, high resolution, strong
 
 <h2 id="alternative-stream-information-icons">Alternative Stream Information Icons</h2>
 
+<p>You can import <a href="https://raw.githubusercontent.com/luckynumb3rs/stremio-perfect-setup/refs/heads/main/templates/AIOStreams-Formatter.json"><strong>this</strong></a> <em>AIOStreams</em> template directly (<strong>AIOStreams → Save &amp; Install → Import → Import Template → [Paste Link] → Go</strong>) if you’re only interested in the two formatter options provided in this guide without changing anything else from your configuration. Or you can manually update the formatter as follows:</p>
+
 <p>If you went with the <strong><em>Flat Monochrome Icons</em></strong> for the formatter and want instead more <strong><em>Colorful Icons</em></strong> on the stream information view, you can go to the <strong>Formatter</strong> tab in <strong>AIOStreams</strong>, and replace the text in the <strong>Description Template</strong> with this:</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{stream.editions::exists["🎬  {stream.editions::join(' · ')} "||""]}

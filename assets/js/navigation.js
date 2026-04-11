@@ -2,17 +2,17 @@
 
 // Define your guide files (update paths as needed)
 const guideFiles = [
-    { title: '🎬 Home', file: '/index.html' },
     { title: '🔰 Beginner Concepts', file: '/0-Beginner-Concepts.html' },
     { title: '📝 1. Accounts Preparation', file: '/1-Accounts-Preparation.html' },
-    { title: '⚙️ 2. Stremio Initialization', file: '/2-Stremio-Initialization.html' },
-    { title: '📚 3. AIOStreams Setup', file: '/3-AIOStreams-Setup.html' },
-    { title: '🔎 4. AIOMetadata Setup', file: '/4-AIOMetadata-Setup.html' },
-    { title: '🧹 5. Cinebye Cleanup', file: '/5-Cinebye-Cleanup.html' },
-    { title: '🤖 6. Personalized Lists', file: '/6-Personalized-Lists.html' },
+    { title: '⚙️ 2. Stremio Account Initialization', file: '/2-Stremio-Initialization.html' },
+    { title: '📚 3. AIOStreams [Find Streams]', file: '/3-AIOStreams-Setup.html' },
+    { title: '🔎 4. AIOMetadata [Metadata & Catalogs]', file: '/4-AIOMetadata-Setup.html' },
+    { title: '🧹 5. Cinebye [Clean Up]', file: '/5-Cinebye-Cleanup.html' },
+    { title: '🤖 6. Personalized & Automated Lists', file: '/6-Personalized-Lists.html' },
     { title: '🛠️ Additional Stuff', file: '/7-Additional-Stuff.html' },
     { title: '❓ Configuration Q&A', file: '/8-Configuration-QA.html' },
-    { title: '🎛️ AIOManager Setup', file: '/AIOManager-Setup.html' },
+    { title: '🎛️ AIOManager [Power Users]', file: '/AIOManager-Setup.html' },
+    { title: '📜 Changelog', file: '/Changelog.html' },
     { title: '🔔 Updates', file: '/Updates.html' },
 ];
 
@@ -21,13 +21,25 @@ function navigateToPage(filePath) {
     window.location.href = filePath;
 }
 
-// Generate the sidebar navigation
 function renderSidebar() {
     const mount = document.getElementById("sidebar-nav");
     if (!mount) return;
 
+    // Create the Home link
+    const home = document.createElement("a");
+    home.className = "nav-link";
+    home.href = "/index.html"; // Update this path if needed
+    home.textContent = "🎬 Home";
+
+    // Highlight the current page if it's the home page
+    if (window.location.pathname.endsWith("index.html")) {
+        home.setAttribute("aria-current", "page");
+    }
+
+    // Create the <ul> for the rest of the guide files
     const ul = document.createElement("ul");
 
+    // Add the guide files to the <ul>
     guideFiles.forEach(guide => {
         const li = document.createElement("li");
         const a = document.createElement("a");
@@ -44,7 +56,11 @@ function renderSidebar() {
         ul.appendChild(li);
     });
 
+    // Clear the sidebar
     mount.innerHTML = "";
+
+    // Append the Home link and the <ul> to the sidebar
+    mount.appendChild(home);
     mount.appendChild(ul);
 
     // Add click handlers to sidebar links
@@ -57,7 +73,6 @@ function renderSidebar() {
     });
 }
 
-// Render quick navigation within the page
 function renderQuickNav() {
     const quick = document.getElementById("quick-nav");
     const list = document.getElementById("quick-nav-list");
@@ -83,6 +98,10 @@ function renderQuickNav() {
     });
 
     if (list.children.length > 0) {
+        const h1 = article.querySelector("h1");
+        if (h1 && h1.nextSibling) {
+            article.insertBefore(quick, h1.nextSibling); // Insert quick-nav after the <h1>
+        }
         quick.hidden = false;
     }
 }
